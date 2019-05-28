@@ -1,34 +1,15 @@
 {
-  "name": "forest-templates",
-  "description": "Semantic-UI Forest Templates",
+  "name": "forest-template-semantic-ui-homepage-html",
   "version": "0.1.0",
+  "private": true,
+  "main": "index.html",
   "scripts": {
-    "capture": "node scripts/capture.js",
-    "format": "prettier --write {bootstrap,semantic-ui}/*/html/*.html {bootstrap,semantic-ui}/*/react/src/*.jsx {bootstrap,semantic-ui}/*/react/src/*.css",
-    "upgrade-react": "node scripts/upgrade-react.js",
-    "upgrade-html": "node scripts/upgrade-html.js"
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/semantic-ui-forest/forest-templates.git"
-  },
-  "keywords": [
-    "Semantic-UI",
-    "Templaltes",
-    "Bootstrap",
-    "CSS"
-  ],
-  "author": "PPType, Inc.",
-  "license": "BSD-3-Clause",
-  "bugs": {
-    "url": "https://github.com/semantic-ui-forest/forest-templates/issues"
-  },
-  "homepage": "https://github.com/semantic-ui-forest/forest-templates#readme",
+  "dependencies": {},
   "devDependencies": {
-    "codesandbox": "^1.3.6",
-    "console-stamp": "^0.2.7",
-    "prettier": "^1.15.3",
-    "puppeteer": "^1.11.0",
-    "sharp": "^0.21.3"
-  }
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": []
 }
