@@ -1,20 +1,34 @@
 {
-  "name": "semantic-ui-css",
-  "version": "2.4.1",
-  "title": "Semantic UI",
-  "description": "CSS Only distribution of Semantic UI",
-  "homepage": "http://www.semantic-ui.com",
-  "author": "Jack Lukic <jack@semantic-ui.com>",
-  "license": "MIT",
-  "main": "semantic.js",
+  "name": "forest-templates",
+  "description": "Semantic-UI Forest Templates",
+  "version": "0.1.0",
+  "scripts": {
+    "capture": "node scripts/capture.js",
+    "format": "prettier --write {bootstrap,semantic-ui}/*/html/*.html {bootstrap,semantic-ui}/*/react/src/*.jsx {bootstrap,semantic-ui}/*/react/src/*.css",
+    "upgrade-react": "node scripts/upgrade-react.js",
+    "upgrade-html": "node scripts/upgrade-html.js"
+  },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Semantic-Org/Semantic-UI-CSS.git"
+    "url": "git+https://github.com/semantic-ui-forest/forest-templates.git"
   },
+  "keywords": [
+    "Semantic-UI",
+    "Templaltes",
+    "Bootstrap",
+    "CSS"
+  ],
+  "author": "PPType, Inc.",
+  "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/Semantic-Org/Semantic-UI/issues"
+    "url": "https://github.com/semantic-ui-forest/forest-templates/issues"
   },
-  "dependencies": {
-    "jquery": "x.*"
+  "homepage": "https://github.com/semantic-ui-forest/forest-templates#readme",
+  "devDependencies": {
+    "codesandbox": "^1.3.6",
+    "console-stamp": "^0.2.7",
+    "prettier": "^1.15.3",
+    "puppeteer": "^1.11.0",
+    "sharp": "^0.21.3"
   }
 }
