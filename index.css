@@ -1,4 +1,4 @@
-body {
+.body {
   background: url('images/background.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -6,6 +6,6 @@ body {
   -o-background-size: cover;
 }
 
-navbar {
+.navbar {
     background-color: #800080;
 }
