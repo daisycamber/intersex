@@ -5,3 +5,7 @@ body {
   background-size: cover;
   -o-background-size: cover;
 }
+
+.navbar-default {
+    background-color: #F8F8F8;
+}
