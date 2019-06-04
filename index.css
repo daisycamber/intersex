@@ -1,5 +1,5 @@
 body {
-  background: url('images/background.jpg') no-repeat center center fixed;
+  background: url('images/background.jpg');
   position:relative;
   height: 100%;
 }
