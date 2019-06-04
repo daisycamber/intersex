@@ -1,5 +1,11 @@
 body {
-  background: url('images/background.jpg') no-repeat center;  
+  background: url('images/background.jpg');  
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 .fa {
