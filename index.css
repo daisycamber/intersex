@@ -1,10 +1,9 @@
 body {
   background: url('images/background.jpg') no-repeat center center fixed; 
-  position:relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  display: block;
-  height: 100%;
-  width: 100%;
 }
 .fa {
   padding: 20px;
