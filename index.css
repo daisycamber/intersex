@@ -1,7 +1,6 @@
 body {
   background: url('images/background.jpg') no-repeat center center fixed; 
-  min-height: auto;
-  min-width: auto;
+  background-size: cover;
 }
 .fa {
   padding: 20px;
