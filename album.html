@@ -18,6 +18,14 @@ function drawLine(x,y,xx,yy){
 }
 
 drawLine(0,0,3000,3000);
+  
+  var lines = 12;
+  var lineSize = 3000/12;
+  
+  for(var i = 0; i < lines; i++)
+  {
+    drawLine(3000,0,lineSize,3000);
+  }
 </script>
 </canvas>
 </html>
