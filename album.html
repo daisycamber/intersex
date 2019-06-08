@@ -8,23 +8,17 @@
 </head>
 <canvas id="myCanvas" width="3000" height="3000"></canvas>
 <script>
-  
-
-function drawLine(x,y,xx,yy){
-  var c = document.getElementById("myCanvas");
-  var ctx = c.getContext("2d");
-ctx.lineWidth = 10;
-  ctx.moveTo(x, y);
-  ctx.lineTo(xx, yy);
-}
-
-drawLine(0,0,3000,3000);
-  
+  function drawLine(x,y,xx,yy){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.lineWidth = 10;
+    ctx.moveTo(x, y);
+    ctx.lineTo(xx, yy);
+  }
+  drawLine(0,0,3000,3000);
   var lines = 12;
   var lineSize = 3000/12;
-  
-  for(var i = 0; i < lines; i++)
-  {
+  for(var i = 0; i < lines; i++){
     drawLine(3000,0,lineSize,3000);
   }
 </script>
