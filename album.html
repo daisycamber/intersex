@@ -9,10 +9,11 @@
 <canvas id="myCanvas" width="3000" height="3000">
 <script>
   
-var c = document.getElementById("myCanvas");
+
+function drawLine(x,y,xx,yy){
+  var c = document.getElementById("myCanvas");
   var ctx = c.getContext("2d");
 ctx.lineWidth = 10;
-function drawLine(x,y,xx,yy){
   ctx.moveTo(x, y);
   ctx.lineTo(xx, yy);
 }
