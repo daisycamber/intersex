@@ -1,13 +1,12 @@
 body {
   background: url('images/background.png');
   /* Full height */
-  max-height: 120%;  
-  max-width: 120%;
-  width: auto;
-  height: auto;
-  /* Center and scale the image nicely */
+  position: relative;
+  opacity: 0.65;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
 }
 .fa {
   padding: 20px;
