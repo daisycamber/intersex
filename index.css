@@ -2,7 +2,7 @@ body {
   background: url('images/background.png');
   /* Full height */
   height: 100%;  
-  max-width: 200%;
+  max-width: 100%;
   width: auto;
   /* Center and scale the image nicely */
   background-position: center;
