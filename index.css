@@ -11,9 +11,9 @@ body {
 .fa {
   padding: 20px;
   font-size: 30px;
+  width: 30px;
   text-align: center;
   text-decoration: none;
-  margin: 5px 5px;
   border-radius: 50%;
 }
 
