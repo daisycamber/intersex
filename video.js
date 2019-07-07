@@ -16,6 +16,9 @@ var config = {
         create: create,
         update: update
     },
+    audio: {
+        disableWebAudio: true
+    }
 };
 
 var game = new Phaser.Game(config);
