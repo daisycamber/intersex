@@ -1,7 +1,7 @@
 var minParticleSize = 1;
 var maxParticleSpeed = 10;
-var width = 1920;
-var height = 1080;
+var width = window.innerWidth;
+var height = window.innerHeight;
 var maxParticleSize = width/30;
 var config = {
     type: Phaser.CANVAS,
