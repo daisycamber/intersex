@@ -32,9 +32,9 @@ var circles = [];
 function create ()
 {
     for(var i = 0; i < 20; i++){
-        rings[i] = this.add.circle(width/2, height/2, 50 + 22 * (99 - i),"0x"+Phaser.Math.Between(0x999999,0xFFFFFF).toString(16));
+        rings[i] = this.add.circle(width/2, height/2, 50 + 50 * (19 - i),"0x"+Phaser.Math.Between(0x999999,0xFFFFFF).toString(16));
     }
-    for(var i = 0; i < 50; i++){
+    for(var i = 0; i < 20; i++){
         circles[i] = this.add.circle(Phaser.Math.Between(0, width), height/2, Phaser.Math.Between(minParticleSize,maxParticleSize),"0x"+Phaser.Math.Between(0xCCCCCC,0xFFFFFF).toString(16));
         circles[i].xv = Phaser.Math.Between(-maxParticleSpeed,maxParticleSpeed);
         circles[i].yv = Phaser.Math.Between(-maxParticleSpeed,maxParticleSpeed);
@@ -62,7 +62,7 @@ function update ()
             
         }
         for(var i = 0; i < rings.length; i++){
-            rings[i].radius=50 + (22 * i);
+            rings[i].radius=50 + (50 * i);
             rings[i].depth = rings.length - i;
             rings[i].setFillStyle("0x"+Phaser.Math.Between(0x999999,0xFFFFFF).toString(16));
         }
