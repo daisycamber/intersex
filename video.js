@@ -24,7 +24,7 @@ function preload ()
 {
     this.game.canvas.id = 'canvas';
     this.load.image('test', 'test.png');
-    
+    this.load.audio('portals', ['Portals.mp3']);
 }
 var currentRing = 0;
 var rings = [];// .depth = NUMBER
@@ -39,9 +39,8 @@ function create ()
         circles[i].xv = Phaser.Math.Between(-maxParticleSpeed,maxParticleSpeed);
         circles[i].yv = Phaser.Math.Between(-maxParticleSpeed,maxParticleSpeed);
     }
-    var myAudio = new Audio("Portals.mp3");
-    myAudio.loop = true;
-    myAudio.play();
+    var music = this.sound.add("portals");
+    music.play("loop", {delay:0});
 }
 var frame = 0;
 var downloadOn = false;
