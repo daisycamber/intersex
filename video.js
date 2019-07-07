@@ -39,8 +39,7 @@ function create ()
         circles[i].xv = Phaser.Math.Between(-maxParticleSpeed,maxParticleSpeed);
         circles[i].yv = Phaser.Math.Between(-maxParticleSpeed,maxParticleSpeed);
     }
-    var music = this.sound.add("portals");
-    music.play("loop", {delay:0});
+    scene.sound.play("portals");
 }
 var frame = 0;
 var downloadOn = false;
