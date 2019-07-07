@@ -64,8 +64,9 @@ function update ()
         for(var i = 0; i < rings.length; i++){
             rings[i].radius=50 + (50 * i);
             rings[i].depth = rings.length - i;
+            rings[i].set
         }
-        rings[0].setFillStyle("0x"+Phaser.Math.Between(0x999999,0xFFFFFF).toString(16));
+        rings[Phaser.Math.Between(0,rings.length)].setFillStyle("0x"+Phaser.Math.Between(0x999999,0xFFFFFF).toString(16));
         lastBeat = frame;
     }
     else{
