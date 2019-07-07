@@ -4,6 +4,13 @@
 }
 
 html, body {min-height: 100%;}
+.center {
+  margin: auto;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  width: 20%;  
+}
 
 body {
   /* Full height */
