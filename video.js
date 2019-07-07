@@ -1,7 +1,7 @@
 var minParticleSize = 1;
 var maxParticleSpeed = 10;
 var width = window.innerWidth;
-var height = window.innerHeight - document.getElementById("navbar").clientHeight;
+var height = window.innerHeight - document.getElementById('navbar').clientHeight;
 var maxParticleSize = width/20;
 var config = {
     type: Phaser.CANVAS,
