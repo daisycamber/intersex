@@ -31,7 +31,7 @@ var rings = [];// .depth = NUMBER
 var circles = [];
 function create ()
 {
-    for(var i = 0; i < 20; i++){
+    for(var i = 0; i < 10; i++){
         rings[i] = this.add.circle(width/2, height/2, 50 + 50 * (19 - i),"0x"+Phaser.Math.Between(0x999999,0xFFFFFF).toString(16));
     }
     for(var i = 0; i < 20; i++){
