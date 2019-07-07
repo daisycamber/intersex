@@ -2,7 +2,7 @@ var minParticleSize = 1;
 var maxParticleSpeed = 10;
 var width = window.innerWidth;
 var height = window.innerHeight;
-var maxParticleSize = width/30;
+var maxParticleSize = width/20;
 var config = {
     type: Phaser.CANVAS,
     width: width,
@@ -64,7 +64,6 @@ function update ()
         for(var i = 0; i < rings.length; i++){
             rings[i].radius=50 + (50 * i);
             rings[i].depth = rings.length - i;
-            rings[i].set
         }
         rings[Phaser.Math.Between(0,rings.length-1)].setFillStyle("0x"+Phaser.Math.Between(0x999999,0xFFFFFF).toString(16));
         lastBeat = frame;
