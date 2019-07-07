@@ -59,7 +59,7 @@ function update ()
             circles[i].y=height/2;
             circles[i].xv = Phaser.Math.Between(-maxParticleSpeed,maxParticleSpeed);
             circles[i].yv = Phaser.Math.Between(-maxParticleSpeed,maxParticleSpeed);
-            
+            circles[i].setFillStyle("0x"+Phaser.Math.Between(0x999999,0xFFFFFF).toString(16));
         }
         for(var i = 0; i < rings.length; i++){
             rings[i].radius=50 + (50 * i);
@@ -73,7 +73,6 @@ function update ()
             rings[i].radius = rings[i].radius + 5; // Make ring bigger
         }
         for(var i = 0; i < circles.length; i++){
-            circles[i].setFillStyle("0x"+Phaser.Math.Between(0x999999,0xFFFFFF).toString(16));
             circles[i].x+=circles[i].xv;
             circles[i].y+=circles[i].yv;
             if(circles[i].y>height+50){
