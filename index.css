@@ -10,6 +10,10 @@ body {
   overflow: auto;
 }
 
+.canvas {
+  padding:0px;
+}
+
 .fa {
   padding: 20px;
   font-size: 30px;
