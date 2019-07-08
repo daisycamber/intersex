@@ -27,7 +27,7 @@ function preload ()
 {
     this.game.canvas.id = 'canvas';
     this.load.image('test', 'test.png');
-    this.load.audio('portals', ['Portals.mp3','Portals.ogg']);
+    this.load.audio('portals', ['assets/music/Portals.mp3','assets/music/Portals.ogg']);
 }
 var currentRing = 0;
 var rings = [];// .depth = NUMBER
