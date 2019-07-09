@@ -1,4 +1,4 @@
-// v1.6
+// v1.7
 var minParticleSize = 1;
 var maxParticleSpeed = 10;
 var width = window.innerWidth;
@@ -88,9 +88,7 @@ var lastBeat = 0;
 var lastHalfBeat = 0;
 function update ()
 {
-    // Update circles and rings on the beat
-    if(frame > lastBeat + fpb) {
-        // Update bars
+    // Update bars
         graphics.clear();
         analyser.getByteFrequencyData(dataArray);
         for (var i = 0; i < analyser.frequencyBinCount; i++) {
@@ -99,6 +97,8 @@ function update ()
             bars[i].height = dataArray[i] * (height/(255 * 2));
             graphics.fillRectShape(bars[i]);
         }
+    // Update circles and rings on the beat
+    if(frame > lastBeat + fpb) {
         for(var i = 0; i < circles.length; i++){
             circles[i].depth = circles.length - i;
             circles[i].y=height/2;
