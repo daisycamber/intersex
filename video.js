@@ -1,4 +1,4 @@
-// v0.9
+// v1.0
 var minParticleSize = 1;
 var maxParticleSpeed = 10;
 var width = window.innerWidth;
@@ -97,6 +97,7 @@ function update ()
         bars[i].height = dataArray[i] * (height/(255 * 2));
         graphics.fillRectShape(bars[i]);
     }
+    graphics.depth = 0;
     // Update circles and rings
     if(frame > lastBeat + fpb) {
         for(var i = 0; i < circles.length; i++){
