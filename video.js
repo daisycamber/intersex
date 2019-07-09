@@ -1,4 +1,4 @@
-// v1.5
+// v1.6
 var minParticleSize = 1;
 var maxParticleSpeed = 10;
 var width = window.innerWidth;
@@ -71,7 +71,7 @@ function create ()
     
     // generate bars
     for (var i = 0; i < analyser.frequencyBinCount; i++) {
-        bars[i] = new Phaser.Geom.Rectangle(i * barWidth, 0, barWidth, barWidth);
+        bars[i] = new Phaser.Geom.Rectangle(i * barWidth, 0, barWidth, 0);
         graphics.fillRectShape(bars[i]);
     }
     audio.play();
