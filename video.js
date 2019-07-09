@@ -33,7 +33,7 @@ var currentRing = 0;
 var rings = [];// .depth = NUMBER
 var circles = [];
 var dataArray;
-var bars;
+var bars = [];
 var graphics;
 function create ()
 {
