@@ -1,4 +1,4 @@
-// v1.4
+// v1.5
 var minParticleSize = 1;
 var maxParticleSpeed = 10;
 var width = window.innerWidth;
@@ -42,14 +42,14 @@ function create ()
     for(var i = 0; i < 10; i++){
         rings[i] = this.add.circle(width/2, height/2, 50 + 50 * (9 - i),"0x"+Phaser.Math.Between(0x999999,0xFFFFFF).toString(16));
     }
-    for(var i = 0; i < 20; i++){
+    for(var i = 0; i < 10; i++){
         circles[i] = this.add.circle(Phaser.Math.Between(0, width), height/2, Phaser.Math.Between(minParticleSize,maxParticleSize),"0x"+Phaser.Math.Between(0xCCCCCC,0xFFFFFF).toString(16));
         circles[i].xv = Phaser.Math.Between(-maxParticleSpeed,maxParticleSpeed);
         circles[i].yv = Phaser.Math.Between(-maxParticleSpeed,maxParticleSpeed);
     }
     
     graphics = this.add.graphics({ lineStyle: { width: 2, color: 0x000000 }, fillStyle: { color: 0x000000 } });
-    graphics.depth = 1000;
+    graphics.depth = 100;
 
     // Set up analyser and play music
     audio = new Audio();
