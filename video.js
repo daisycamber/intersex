@@ -1,4 +1,4 @@
-// v0.4
+// v0.5
 var minParticleSize = 1;
 var maxParticleSpeed = 10;
 var width = window.innerWidth;
@@ -38,6 +38,7 @@ var graphics;
 function create ()
 {
     graphics = this.add.graphics({ lineStyle: { width: 2, color: 0x000000 }, fillStyle: { color: 0x000000 } });
+    graphics.depth = 0;
     
     for(var i = 0; i < 10; i++){
         rings[i] = this.add.circle(width/2, height/2, 50 + 50 * (9 - i),"0x"+Phaser.Math.Between(0x999999,0xFFFFFF).toString(16));
@@ -106,7 +107,7 @@ function update ()
         }
         for(var i = 0; i < rings.length; i++){
             rings[i].radius=50 + (50 * i);
-            rings[i].depth = rings.length - i;
+            rings[i].depth = rings.length - i + 1;
         }
         rings[Phaser.Math.Between(0,rings.length-1)].setFillStyle("0x"+Phaser.Math.Between(0x999999,0xFFFFFF).toString(16));
         lastBeat = frame;
@@ -130,13 +131,6 @@ function update ()
             if(circles[i].x<-50){
                 circles[i].x=width + 50;
             }
-        }
-    }
-    if(frame < 60 * 60 * 3.2){
-        
-        if(downloadOn){
-            var image    = this.game.canvas.toDataURL();
-            download(image, frame + ".png", "image/png");
         }
     }
     frame++;
