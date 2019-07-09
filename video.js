@@ -1,4 +1,4 @@
-// v0.2
+// v0.3
 var minParticleSize = 1;
 var maxParticleSpeed = 10;
 var width = window.innerWidth;
@@ -33,8 +33,12 @@ var currentRing = 0;
 var rings = [];// .depth = NUMBER
 var circles = [];
 var dataArray;
+var bars;
+var graphics;
 function create ()
 {
+    graphics = this.add.graphics({ lineStyle: { width: 2, color: 0x000000 }, fillStyle: { color: 0x000000 } });
+    
     for(var i = 0; i < 10; i++){
         rings[i] = this.add.circle(width/2, height/2, 50 + 50 * (9 - i),"0x"+Phaser.Math.Between(0x999999,0xFFFFFF).toString(16));
     }
