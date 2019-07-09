@@ -108,7 +108,7 @@ function update ()
         }
         for(var i = 0; i < rings.length; i++){
             rings[i].radius=50 + (50 * i);
-            //rings[i].depth = rings.length - i + 1;
+            rings[i].depth = rings.length - i + 10;
         }
         rings[Phaser.Math.Between(0,rings.length-1)].setFillStyle("0x"+Phaser.Math.Between(0x999999,0xFFFFFF).toString(16));
         lastBeat = frame;
