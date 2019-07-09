@@ -1,4 +1,4 @@
-// v1.1
+// v1.2
 var minParticleSize = 1;
 var maxParticleSpeed = 10;
 var width = window.innerWidth;
@@ -60,9 +60,10 @@ function create ()
     source = context.createMediaElementSource(audio);
     source.connect(analyser);
     analyser.connect(context.destination);
-    analyser.fftSize = 256;
+    analyser.fftSize = 128;
     
     dataArray = new Uint8Array(analyser.frequencyBinCount);
+    console.log(analyser.frequencyBinCount);
     
     analyser.getByteFrequencyData(dataArray);
     
