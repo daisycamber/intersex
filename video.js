@@ -1,4 +1,4 @@
-// v1.0
+// v1.1
 var minParticleSize = 1;
 var maxParticleSpeed = 10;
 var width = window.innerWidth;
@@ -49,7 +49,7 @@ function create ()
     }
     
     graphics = this.add.graphics({ lineStyle: { width: 2, color: 0x000000 }, fillStyle: { color: 0x000000 } });
-    graphics.depth = 0;
+    graphics.depth = 1000;
 
     // Set up analyser and play music
     audio = new Audio();
@@ -97,7 +97,6 @@ function update ()
         bars[i].height = dataArray[i] * (height/(255 * 2));
         graphics.fillRectShape(bars[i]);
     }
-    graphics.depth = 0;
     // Update circles and rings
     if(frame > lastBeat + fpb) {
         for(var i = 0; i < circles.length; i++){
