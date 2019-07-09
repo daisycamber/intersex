@@ -1,3 +1,4 @@
+// v0.1
 var minParticleSize = 1;
 var maxParticleSpeed = 10;
 var width = window.innerWidth;
@@ -27,11 +28,11 @@ function preload ()
 {
     this.game.canvas.id = 'canvas';
     this.load.image('test', 'test.png');
-    this.load.audio('portals', ['assets/music/Portals.mp3','assets/music/Portals.ogg']);
 }
 var currentRing = 0;
 var rings = [];// .depth = NUMBER
 var circles = [];
+var dataArray;
 function create ()
 {
     for(var i = 0; i < 10; i++){
@@ -42,8 +43,31 @@ function create ()
         circles[i].xv = Phaser.Math.Between(-maxParticleSpeed,maxParticleSpeed);
         circles[i].yv = Phaser.Math.Between(-maxParticleSpeed,maxParticleSpeed);
     }
-    var music = this.sound.add("portals");
-    music.play();
+
+    // Set up analyser and play music
+    audio = new Audio();
+    context = new (window.AudioContext || window.webkitAudioContext)();
+    analyser = context.createAnalyser();
+    
+    audio.src = "Portals.mp3"; // the source path
+    source = context.createMediaElementSource(audio);
+    source.connect(analyser);
+    analyser.connect(context.destination);
+    analyser.fftSize = 256;
+    
+    dataArray = new Uint8Array(analyser.frequencyBinCount);
+    
+    analyser.getByteFrequencyData(dataArray);
+    console.log("Frequency bin count is " + analyser.frequencyBinCount);
+    
+    barWidth = 1920/analyser.frequencyBinCount;
+    
+    // generate bars
+    for (var i = 0; i < analyser.frequencyBinCount; i++) {
+        bars[i] = new Phaser.Geom.Rectangle(i * barWidth, 0, barWidth, barWidth);
+        graphics.fillRectShape(bars[i]);
+    }
+    audio.play();
 }
 var frame = 0;
 var downloadOn = false;
@@ -57,6 +81,17 @@ var lastBeat = 0;
 var lastHalfBeat = 0;
 function update ()
 {
+    // Update bars
+    graphics.clear();
+    
+    analyser.getByteFrequencyData(dataArray);
+    for (var i = 0; i < analyser.frequencyBinCount; i++) {
+        var color = Phaser.Display.Color.GetColor(dataArray[i]/2, dataArray[i], 0);
+        graphics.fillStyle(color);
+        bars[i].height = dataArray[i] * (height/(255 * 2));
+        graphics.fillRectShape(bars[i]);
+    }
+    // Update circles and rings
     if(frame > lastBeat + fpb) {
         for(var i = 0; i < circles.length; i++){
             circles[i].depth = circles.length - i;
