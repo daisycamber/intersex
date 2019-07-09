@@ -1,4 +1,4 @@
-// v0.3
+// v0.4
 var minParticleSize = 1;
 var maxParticleSpeed = 10;
 var width = window.innerWidth;
