@@ -1,4 +1,4 @@
-// v0.7
+// v0.8
 var minParticleSize = 1;
 var maxParticleSpeed = 10;
 var width = window.innerWidth;
@@ -96,7 +96,6 @@ function update ()
         graphics.fillStyle(color);
         bars[i].height = dataArray[i] * (height/(255 * 2));
         graphics.fillRectShape(bars[i]);
-        graphics.depth = 0;
     }
     // Update circles and rings
     if(frame > lastBeat + fpb) {
@@ -109,7 +108,7 @@ function update ()
         }
         for(var i = 0; i < rings.length; i++){
             rings[i].radius=50 + (50 * i);
-            rings[i].depth = rings.length - i + 1;
+            //rings[i].depth = rings.length - i + 1;
         }
         rings[Phaser.Math.Between(0,rings.length-1)].setFillStyle("0x"+Phaser.Math.Between(0x999999,0xFFFFFF).toString(16));
         lastBeat = frame;
