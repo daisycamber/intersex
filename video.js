@@ -1,4 +1,4 @@
-// v0.5
+// v0.6
 var minParticleSize = 1;
 var maxParticleSpeed = 10;
 var width = window.innerWidth;
@@ -37,8 +37,7 @@ var bars = [];
 var graphics;
 function create ()
 {
-    graphics = this.add.graphics({ lineStyle: { width: 2, color: 0x000000 }, fillStyle: { color: 0x000000 } });
-    graphics.depth = 0;
+    
     
     for(var i = 0; i < 10; i++){
         rings[i] = this.add.circle(width/2, height/2, 50 + 50 * (9 - i),"0x"+Phaser.Math.Between(0x999999,0xFFFFFF).toString(16));
@@ -48,6 +47,9 @@ function create ()
         circles[i].xv = Phaser.Math.Between(-maxParticleSpeed,maxParticleSpeed);
         circles[i].yv = Phaser.Math.Between(-maxParticleSpeed,maxParticleSpeed);
     }
+    
+    graphics = this.add.graphics({ lineStyle: { width: 2, color: 0x000000 }, fillStyle: { color: 0x000000 } });
+    graphics.depth = 0;
 
     // Set up analyser and play music
     audio = new Audio();
@@ -63,7 +65,6 @@ function create ()
     dataArray = new Uint8Array(analyser.frequencyBinCount);
     
     analyser.getByteFrequencyData(dataArray);
-    console.log("Frequency bin count is " + analyser.frequencyBinCount);
     
     barWidth = 1920/analyser.frequencyBinCount;
     
@@ -95,6 +96,7 @@ function update ()
         graphics.fillStyle(color);
         bars[i].height = dataArray[i] * (height/(255 * 2));
         graphics.fillRectShape(bars[i]);
+        graphics.depth = 0;
     }
     // Update circles and rings
     if(frame > lastBeat + fpb) {
