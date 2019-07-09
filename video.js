@@ -1,4 +1,4 @@
-// v1.3
+// v1.4
 var minParticleSize = 1;
 var maxParticleSpeed = 10;
 var width = window.innerWidth;
@@ -60,7 +60,7 @@ function create ()
     source = context.createMediaElementSource(audio);
     source.connect(analyser);
     analyser.connect(context.destination);
-    analyser.fftSize = 32;
+    analyser.fftSize = 64;
     
     dataArray = new Uint8Array(analyser.frequencyBinCount);
     console.log(analyser.frequencyBinCount);
@@ -88,18 +88,17 @@ var lastBeat = 0;
 var lastHalfBeat = 0;
 function update ()
 {
-    // Update bars
-    graphics.clear();
-    
-    analyser.getByteFrequencyData(dataArray);
-    for (var i = 0; i < analyser.frequencyBinCount; i++) {
-        var color = Phaser.Display.Color.GetColor(dataArray[i]/2, dataArray[i], 0);
-        graphics.fillStyle(color);
-        bars[i].height = dataArray[i] * (height/(255 * 2));
-        graphics.fillRectShape(bars[i]);
-    }
-    // Update circles and rings
+    // Update circles and rings on the beat
     if(frame > lastBeat + fpb) {
+        // Update bars
+        graphics.clear();
+        analyser.getByteFrequencyData(dataArray);
+        for (var i = 0; i < analyser.frequencyBinCount; i++) {
+            var color = Phaser.Display.Color.GetColor(dataArray[i]/2, dataArray[i], 0);
+            graphics.fillStyle(color);
+            bars[i].height = dataArray[i] * (height/(255 * 2));
+            graphics.fillRectShape(bars[i]);
+        }
         for(var i = 0; i < circles.length; i++){
             circles[i].depth = circles.length - i;
             circles[i].y=height/2;
@@ -113,8 +112,8 @@ function update ()
         }
         rings[Phaser.Math.Between(0,rings.length-1)].setFillStyle("0x"+Phaser.Math.Between(0x999999,0xFFFFFF).toString(16));
         lastBeat = frame;
-    }
-    else{
+    } 
+    else{ // Off the beat
         for(var i = 0; i < rings.length; i++){
             rings[i].radius = rings[i].radius + 5; // Make ring bigger
         }
