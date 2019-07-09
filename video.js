@@ -1,4 +1,4 @@
-// v0.1
+// v0.2
 var minParticleSize = 1;
 var maxParticleSpeed = 10;
 var width = window.innerWidth;
@@ -49,7 +49,7 @@ function create ()
     context = new (window.AudioContext || window.webkitAudioContext)();
     analyser = context.createAnalyser();
     
-    audio.src = "Portals.mp3"; // the source path
+    audio.src = "assets/music/Portals.mp3"; // the source path
     source = context.createMediaElementSource(audio);
     source.connect(analyser);
     analyser.connect(context.destination);
