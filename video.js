@@ -92,7 +92,7 @@ function update ()
         graphics.clear();
         analyser.getByteFrequencyData(dataArray);
         for (var i = 0; i < analyser.frequencyBinCount; i++) {
-            var color = Phaser.Display.Color.GetColor(dataArray[i]/2, dataArray[i], 0);
+            var color = Phaser.Display.Color.GetColor(255 - dataArray[i], dataArray[i], 0);
             graphics.fillStyle(color);
             bars[i].height = dataArray[i] * (height/(255 * 2));
             graphics.fillRectShape(bars[i]);
