@@ -37,7 +37,7 @@ var deltaLeafSize = 0.5;
 function create ()
 {
     for(var i = 0; i < 25; i++){
-        leaves[i] = this.add.image(window.innerWidth/2,window.innerHeight/2,'leaf1');
+        leaves[i] = this.add.image(window.innerWidth/2,window.innerHeight/2,'leaf1').setTint(0xff0000);
         leaves[i].depth = 100;
         leaves[i].deltaRotation = Phaser.Math.Between(-100, 100)/10000;
         leaves[i].deltaX = Phaser.Math.Between(-100, 100)/50;
