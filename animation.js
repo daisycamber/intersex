@@ -46,6 +46,7 @@ function create ()
         leaves[i].displayWidth = minLeafSize;
         leaves[i].displayHeight = minLeafSize;
     }
+
 }
 var frame = 0;
 var downloadOn = false;
