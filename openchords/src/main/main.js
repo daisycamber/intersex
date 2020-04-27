@@ -9,7 +9,7 @@ function main(){
   stage.canvas.height = window.innerHeight- 200;
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     // some code..
-    stage.canvas.height = window.innerHeight- 150;
+    stage.canvas.height = window.innerHeight- 200;
   }
   console.log(window.innerHeight)
   // Add functionality
