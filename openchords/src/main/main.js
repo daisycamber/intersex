@@ -6,12 +6,7 @@ function main(){
   createjs.Touch.enable(stage)
   // Fit canvas to screen
   stage.canvas.width = window.innerWidth;
-  stage.canvas.height = window.innerHeight- 200;
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    // some code..
-    stage.canvas.height = window.innerHeight- 200;
-  }
-  console.log(window.innerHeight)
+  stage.canvas.height = window.innerHeight;
   // Add functionality
   addSelector();
   scroll();
