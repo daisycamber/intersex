@@ -34,8 +34,10 @@ function addExportButton(toolbar){
 
 // Export the chords to MIDI and download
 function exportMidi(){
+  // create a new midi file
   var midi = new Midi()
-  var track = midi.addTrack()
+// add a track
+  const track = midi.addTrack()
 
   currentChord = 0
   playbackChords = []
@@ -89,7 +91,7 @@ function exportMidi(){
     document.body.appendChild(a);
     a.style = "display: none";
     return function (data, name) {
-      var blob = new Blob(data, {type: "octet/stream"}),
+      var blob = new Blob(data, {type: "byte/stream"}),
       url = window.URL.createObjectURL(blob);
       a.href = url;
       a.download = name;
@@ -97,5 +99,6 @@ function exportMidi(){
       window.URL.revokeObjectURL(url);
     };
   }());
-  saveByteArray([midi.toArray()], "openchords-" + getDate() + ".midi");
+  saveByteArray([midi.toArray()], "openchords-" + getDate() + ".mid");
+  //fs.writeFileSync("openchords-" + getDate() + ".mid", new Buffer(midi.toArray()))
 }
