@@ -188,17 +188,17 @@
       <div class="card border-0 shadow my-5">
         <div class="card-body p-5">
       <b>*Pinned post</b>
-        <h1>*How To Build a Beautiful, Responsive and Inexpensive Music Website</h1>
+        <h2>*How To Build a Beautiful, Responsive and Inexpensive Music Website</h2>
 	      <p>5/5/2020 4:00 PM</p>
         <p>Hello. Today I am going to talk about how I built and host a fast, optimized, SEO-friendly music website for only $12 a year. This cost is paid to google in order to register the domain, and is minimal considering the profit I make from this website. Consider the below figures.</p>
         <p>Users engage in this website and stream my music on services, for example Spotify, which pays 0.4 cents per play. I receive about 10 new users per day from organic searches. Over a year, this is $0.004 x 10 users x 365 days which is $14.6 dollars per year. Beyond this, Google advertisements on this site have made $1.81 in less than a year, $0.76 last month. And this is just accounting for if every user streams one song once. It's clear that my site is helping me out here.</p>
         <p>And how am I paying so little for it? The answer is simple. I don't pay for hosting. I host my site through GitHub Pages and write everything I need in HTML. I taught myself HTML and CSS online, and I will show you how you can learn to create your own site just like this one by following a few simple guides. I will also teach you how to optimize your site for search engines and submit URLs to be indexed.</p>
         <p>All links for this guide can be found on the <a href="/blog/17-links" alt="Links for this guide">link page here</a>.</p>
         <p>This guide assumes you are able to write basic code. For lessons on writing HTML and CSS, please visit Codecademy.</p>
-        <h2>Step 1 - Start From a Template</h2>
+        <h3>Step 1 - Start From a Template</h3>
         <p>There's no sense building HTML from scratch. That's why you'll want to start from a template, and use bootstrap so we have some CSS styles and javascript built in to use. Head over to GitHub (Startbootstrap) and download the template I used for this site, or startbootstrap.com to download a different template. Once you have a chosen a template, clone the repository through GitHub. Cloning a repository can be done easily by clicking the button on the GitHub page.</p>
         <p>From here, using windows subsystem for Linux, Linux or a mac with Python installed, open a command prompt, navigate to the git repository or downloaded file, using "cd /path/to/file" and type "python -m SimpleHTTPServer". This will start a local server on your computer where you can view your new website. Using a web browser, navigate to localhost:8000 and confirm that a website displays. If all is well, you are ready for the next step.</p>
-        <h2>Step 2 - Content</h2>
+        <h3>Step 2 - Content</h3>
         <p>Now you are ready to add content to your website. You will need a square background image, at least 1280x1280px, in webp format. Resize your image, then convert it to webp using the converter at webp-converter.com. Place this image in a file called images inside your repository. Edit index.css to include these lines at the top:</p>
         <p>body {</p>
         <p>  background: url('/images/background.webp') no-repeat center center fixed;</p>
@@ -209,14 +209,14 @@
         <p>}</p>
         <p>Replace 'background.webp' with the name of your background image. Save your file, and you will be able to view your new background image at localhost:8000.</p>
         <p>Now you will need to add containers to your site. I made containers by adding "&lt;div class="container"&gt;&lt;div class="card border-0 shadow my-5"&gt;&lt;div class="card-body p-5"&gt;" after the beginning body tag and adding three closing &lt;/div&gt; tags after. From here on you can add all your content, images and links. You can also add multiple pages to your site and a blog like mine. If you need to brush up on your HTML head over to Codecademy and they can help you out. If you are linking your music on your website, you'll want to add clickable logos for the streaming services too. Once you're done with your content, you're ready to test your site.</p>
-        <h2>Step 3 - Test your site</h2>
+        <h3>Step 3 - Test your site</h3>
         <p>Before you publish your site to GitHub, make sure everything is set up properly. Test your site to make sure all the links work and everything looks right. Using HTML and CSS you can also optimize your site for everything you need. If you're satisified with your site, you're ready to move on.</p>
-        <h2>Step 4 - Publish Your Site</h2>
+        <h3>Step 4 - Publish Your Site</h3>
         <p>Follow the guides at GitHub Pages to publish your site, setup HTTPS, a custom domain name and a custom 404 page. This is all you need to get your site online for free! Make sure to add a synthetic record in your DNS (I recommend Google Domains) that will redirect www HTTPS and HTTP traffic to your site. You can check if the URL is set up properly by using this free site checker from Seobility. This will also check and help you fix other parts of your site which need work for search engine optimization.</p>
         <p>One thing you will want to do is use different images based on screen resolution. This looks like "&lt;img class="img-fluid rounded" srcset="images/home-480w.webp 480w, images/home-1280w.webp 1280w" sizes="(max-width: 600px) 480px, 1280px" src="images/home-1280w.webp" alt="Intersex - Electronic pop music from musician and visual artist Jasper Holton"&lt;&gt;/img&gt;"</p>
         <h3>Step 5 - Fix errors</h3>
         <p>Make sure to read your Seobility site check report carefully and look for anything you can improve. This will greatly help your site rank on google. Add descriptions to your images and links using the alt tag, and make sure your site has around 1000 words of conent. It's a good idea to put a popular blog post, press release or longer artist bio on the front page to help with search engine optimization.</p>
-        <h2>Step 5 - Submit to Google</h2>
+        <h3>Step 5 - Submit to Google</h3>
         <p>You can also submit to other search engines if you like. Head over to Google Search Console, claim your property, and type in the URL of the page(s) you would like index. You can press "Request indexing" to have these pages indexed on google and see organic traffic on your site through the search engine.</p>
         <p>This is all you need to set up a beautiful, professional website for your content. This doesn't only apply to music. Whether you run a business, make art, music or even write, having a website is a great way to share your content with the world and make a profit from it.</p>
         </div>
