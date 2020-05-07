@@ -23,7 +23,6 @@ function addDropdowns(){
   noteLengthDropdownButton.graphics.beginFill("White")
   noteLengthDropdownButton.graphics.drawRect(KEYSIZE * 6, KEYSIZE * 3, KEYSIZE, KEYSIZE);
   noteLengthDropdownButton.addEventListener("click", function(event) {
-    console.log("clicked this meme")
     if(noteLengthDropdown.visible == false) { // Toggle visible
       noteLengthDropdown.visible = true
     } else {
@@ -66,7 +65,6 @@ function addDropdowns(){
   keyDropdown.graphics.beginFill("White")
   keyDropdown.graphics.drawRect(KEYSIZE * 2, 0, KEYSIZE, KEYSIZE);
   keyDropdown.addEventListener("click", function(event) {
-    console.log(dropdownKeys.visible)
     if(dropdownKeys.visible == true) { // Toggle visible
       dropdownKeys.visible = false
     } else {
@@ -153,7 +151,6 @@ function addDropdowns(){
   notesDropdownButton.graphics.beginFill("White")
   notesDropdownButton.graphics.drawRect(KEYSIZE * 7, KEYSIZE * 3, KEYSIZE * 3, KEYSIZE);
   notesDropdownButton.addEventListener("click", function(event) {
-    console.log("clicked this meme")
     if(notesDropdown.visible == true) { // Toggle visible
       notesDropdown.visible = false
     } else {
@@ -179,7 +176,6 @@ function addDropdowns(){
       notesText.text = noteNumbers[Math.ceil(event.stageY/KEYSIZE)-5]
       notesDropdown.visible = false
       notesInChord = Math.ceil(event.stageY/KEYSIZE)-4;
-      console.log(notesInChord);
     });
     notesDropdown.addChild(key)
     dropdownKey.addChild(dropdownKeyText);

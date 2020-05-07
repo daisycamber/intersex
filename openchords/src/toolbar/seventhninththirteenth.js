@@ -12,7 +12,6 @@ function addSeventhNinthThirteenthButtons(toolbar){
       addSeventhButton.graphics.beginFill("Pink").drawRoundRectComplex(KEYSIZE * 11, KEYSIZE*2, KEYSIZE, KEYSIZE, KEYROUND, KEYROUND, KEYROUND, KEYROUND);
     }
     addSeventh = !addSeventh;
-    console.log(addSeventh)
   });
   toolbar.addChild(addSeventhButton)
   var addSeventhText =  new createjs.Text("7th", TEXTTYPE, "#000000")

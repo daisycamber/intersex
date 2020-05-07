@@ -28,7 +28,6 @@ function addPianoKeys(){
     var octave = Math.ceil(((numKeys-i)-3)/12)
     key.text = chromaticScale[(i) % 12] + octave
     key.addEventListener("click", function(event) {
-      console.log(event.currentTarget.text)
       synth.triggerAttackRelease(event.currentTarget.text, '8n')
     });
 
@@ -44,5 +43,5 @@ function addPianoKeys(){
 
 // Update the keys according to a new interval (deprecated)
 function updateKeys(){
-  console.log("Updating keys")
+  
 }

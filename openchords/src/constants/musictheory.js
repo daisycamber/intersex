@@ -232,7 +232,7 @@ var chordKeys = {
       "vi":"G Minor", // G MINOR
       "viio":"A Dim5", // A DIM
       "i":"Bb Minor", // Bb MINOR
-      "iio":"C Dim", // C DIM
+      "iio":"C Dim5", // C DIM
       "III":"D Major", // D MAJOR
       "iv":"Eb Minor", // Eb Minor
       "v":"F Minor", // F MINOR
