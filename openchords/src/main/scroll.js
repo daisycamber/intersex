@@ -3,18 +3,18 @@ var mouseDown = false
 function scroll(){
   var lastY = 0
   var lastX = 0
-  stage.on("stagemousedown", function(evt) {
+  stage.on("mousedown", function(evt) {//stagemousedown
     mouseDown = true
     lastX = evt.stageX
     lastY = evt.stageY
   })
-  stage.on("stagemouseup", function(evt) {
+  stage.on("mouseup", function(evt) {
     mouseDown = false
     //dropdownKeys.visible = false
     //intervalDropdown.visible = false
     //notesDropdown.visible = false
   })
-  stage.on("stagemousemove", function(evt) {
+  stage.on("pressmove", function(evt) {
     if(mouseDown && lastY > 0 && lastX > 0) {
       // Scroll piano keys up/down
       if((pianoKeysContainer.y + evt.stageY - lastY <= KEYSIZE) && (pianoKeysContainer.y + evt.stageY - lastY >= (KEYSIZE * numKeys * -1) + (stage.canvas.height))){
