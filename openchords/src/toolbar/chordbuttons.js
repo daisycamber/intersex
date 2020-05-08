@@ -13,7 +13,7 @@ function addChordButtons(toolbar){
     var key = new createjs.Shape();
     key.graphics.beginFill("White").drawRoundRectComplex(0, 0, KEYSIZE, KEYSIZE, KEYROUND, KEYROUND, KEYROUND, KEYROUND);
     key.text = chords[i]
-    key.addEventListener("click", function(event) {
+    key.addEventListener("mousedown", function(event) {
       chord(event.currentTarget.text);
       //selector.x = selector.x + selector.width
     });
