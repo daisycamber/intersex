@@ -35,6 +35,17 @@ body {
 	border-radius: 50%;
 }
 
+.fa2 {
+	padding: 20px;
+	font-size: 30px;
+	width: 65px;
+	height: 65px;
+	text-align: center;
+	text-decoration: none;
+	margin: 0px 2px;
+	border-radius: 50%;
+}
+
 .fa:hover {
 	opacity: 0.7;
 }
@@ -366,4 +377,14 @@ opacity: 0.3;
 
 .container6:hover .middle1 {
 opacity: 1;
+}
+
+.card-body .fa {
+  position: relative;
+}
+.card-body .fa::before {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
