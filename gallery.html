@@ -21,7 +21,10 @@
     border: 0;
   }
   </style>
-
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+        crossorigin="anonymous"></script>
+<script src="jquery.instagramFeed.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141377624-1"></script>
   <script>
@@ -54,7 +57,15 @@
     <div class="card border-0 shadow my-5">
     <div class="card-body p-5">
       <h1 style="text-align:center">Instagram Gallery</h1>
-      <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/9194e5b655dd5774b9a7af3400d7976f.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+      <div id= “instageam-feed” class= “insta_feed”><div>
+      <script>
+	      $(window).on('load', function(){
+		  $.instagramFeed({
+		    'username': 'intersexmusic',
+		    'container': "#instagram-feed "
+		  });
+		});
+      </script>
     </div>
     </div>
   </div>
