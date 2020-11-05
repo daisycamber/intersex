@@ -22,16 +22,15 @@ function chordCallback(chordNumber){
   }
 
   var chordLength;
-  if(playbackChordLengths[chordNumber] == "1/8"){
+  if(playbackChordLengths[chordNumber] == "⅛"){
     chordLength = "8n"
-  } else if(playbackChordLengths[chordNumber] == "1/4"){
+  } else if(playbackChordLengths[chordNumber] == "¼"){
     chordLength = "4n"
-  } else if(playbackChordLengths[chordNumber] == "1/2"){
+  } else if(playbackChordLengths[chordNumber] == "½"){
     chordLength = "2n"
-  } else if(playbackChordLengths[chordNumber] == "3/4"){
+  } else if(playbackChordLengths[chordNumber] == "¾"){
     chordLength = "1n"
-  }
-  else if(playbackChordLengths[chordNumber] == "1"){
+  } else if(playbackChordLengths[chordNumber] == "1"){
     chordLength = "1n"
   }
   for(var i = 0; i < playbackChords[chordNumber].length; i++){
@@ -48,16 +47,15 @@ function playChord(chordNumber){
     }
 
     var chordLength
-    if(chordLengths[chordNumber] == "1/8"){
+    if(chordLengths[chordNumber] == "⅛"){
       chordLength = "8n"
-    } else if(chordLengths[chordNumber] == "1/4"){
+    } else if(chordLengths[chordNumber] == "¼"){
       chordLength = "4n"
-    } else if(chordLengths[chordNumber] == "1/2"){
+    } else if(chordLengths[chordNumber] == "½"){
       chordLength = "2n"
-    } else if(chordLengths[chordNumber] == "3/4"){
+    } else if(chordLengths[chordNumber] == "¾"){
       chordLength = "1n"
-    }
-    else if(chordLengths[chordNumber] == "1"){
+    } else if(chordLengths[chordNumber] == "1"){
       chordLength = "1n"
     }
     for(var i = 0; i < recordedChords[chordNumber].length; i++){
@@ -123,13 +121,13 @@ function chord(chordName) {
 
 
 
-  if(noteLength == "1/8"){
+  if(noteLength == "⅛"){
     chordLength = "8n"
-  } else if(noteLength == "1/4"){
+  } else if(noteLength == "¼"){
     chordLength = "4n"
-  } else if(noteLength == "1/2"){
+  } else if(noteLength == "½"){
     chordLength = "2n"
-  } else if(noteLength == "3/4"){
+  } else if(noteLength == "¾"){
     chordLength = "1n"
   } else if(noteLength == "1"){
     chordLength = "1n"

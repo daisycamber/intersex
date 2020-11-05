@@ -46,13 +46,13 @@ function exportMidi(){
   for(var i = 0; i < recordedChords.length; i++) {
     playbackChords[currentChord] = recordedChords[i] // Set playback to current chord
     playbackChordLengths[currentChord] = chordLengths[i]
-    if(chordLengths[i] == "1/8"){
+    if(chordLengths[i] == "⅛"){
       currentChord = currentChord + 1
-    } else if(chordLengths[i] == "1/4"){
+    } else if(chordLengths[i] == "¼"){
       currentChord = currentChord + 2
-    } else if(chordLengths[i] == "1/2"){
+    } else if(chordLengths[i] == "½"){
       currentChord = currentChord + 4
-    } else if(chordLengths[i] == "3/4"){
+    } else if(chordLengths[i] == "¾"){
       currentChord = currentChord + 6
     } else if(chordLengths[i] == "1"){
       currentChord = currentChord + 8
@@ -63,13 +63,13 @@ function exportMidi(){
   for(var i = 0; i < playbackChords.length; i++){
     if(playbackChords[i] != null){
       var chordDuration
-      if(playbackChordLengths[i] == "1/8"){
+      if(playbackChordLengths[i] == "⅛"){
         chordDuration = 0.5
-      } else if(playbackChordLengths[i] == "1/4"){
+      } else if(playbackChordLengths[i] == "¼"){
         chordDuration = 1
-      } else if(playbackChordLengths[i] == "1/2"){
+      } else if(playbackChordLengths[i] == "½"){
         chordDuration = 2
-      } else if(playbackChordLengths[i] == "3/4"){
+      } else if(playbackChordLengths[i] == "¾"){
         chordDuration = 3
       } else if(playbackChordLengths[i] == "1"){
         chordDuration = 4
@@ -99,6 +99,6 @@ function exportMidi(){
       window.URL.revokeObjectURL(url);
     };
   }());
-  saveByteArray([midi.toArray()], "openchords-" + getDate() + ".mid");
+  saveByteArray([midi.toArray()], "intersexmusic.com/openchords-" + getDate() + ".mid");
   //fs.writeFileSync("openchords-" + getDate() + ".mid", new Buffer(midi.toArray()))
 }

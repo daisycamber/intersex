@@ -4,7 +4,7 @@ var notesDropdown
 var currentKey = "C"
 var currentInterval = "Major"
 var notesInChord = 3 // Number of notes in the chord
-var noteLength = "1/2"
+var noteLength = "½"
 
 // Update the timing (delay) of a measure if there isnt a chord
 function updateMeasureTiming(){
@@ -32,7 +32,7 @@ function addDropdowns(){
   });
   toolbar.addChild(noteLengthDropdownButton);
 
-  var noteLengthText =  new createjs.Text("1/2", TEXTTYPE, "#000000")
+  var noteLengthText =  new createjs.Text("½", TEXTTYPE, "#000000")
   noteLengthText.x = KEYSIZE * 6 + KEYSIZE/8;
   noteLengthText.y = KEYSIZE * 3 + KEYSIZE/3;
   toolbar.addChild(noteLengthText);
