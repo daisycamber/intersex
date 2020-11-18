@@ -159,6 +159,9 @@ console.log(diff)
   } //recordedChords[j]
   }
 }
+function touchStarted() {
+  Tone.start();
+}
 
 function addChordMarkers() {
   chordsContainer = new createjs.Container()
@@ -179,6 +182,7 @@ function addChordMarkers() {
 
 // Add a chord
 function chord(chordName) {
+  touchStarted()
   chordOctaves[selectedMeasure] = octave
   chordNames[selectedMeasure] = chordName
   if(chordLabels[selectedMeasure] == null){
