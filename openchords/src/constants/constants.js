@@ -7,6 +7,7 @@ if(KEYSIZE > MAXKEYSIZE) KEYSIZE = MAXKEYSIZE
 var TOOLSSIZE = KEYSIZE * 4
 var KEYROUND = window.innerHeight/128
 var TEXTTYPE = "bold " + KEYSIZE/2 + "px Arial"
+var FRACTIONTEXTTYPE = "bold " + KEYSIZE/1.7 + "px Arial"
 var SUBTEXTTYPE = "bold " + KEYSIZE/3.5 + "px Arial"
 var SCROLLSIZE = KEYSIZE
 var SCROLLROUND = SCROLLSIZE/2

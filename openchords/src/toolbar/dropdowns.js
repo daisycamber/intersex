@@ -33,16 +33,16 @@ function addDropdowns(){
   });
   toolbar.addChild(noteLengthDropdownButton);
 
-  var noteLengthText =  new createjs.Text("½", TEXTTYPE, "#000000")
-  noteLengthText.x = KEYSIZE * 6 + KEYSIZE/8;
+  var noteLengthText =  new createjs.Text("½", FRACTIONTEXTTYPE, "#000000")
+  noteLengthText.x = KEYSIZE * 6 + KEYSIZE/4;
   noteLengthText.y = KEYSIZE * 3 + KEYSIZE/3;
   toolbar.addChild(noteLengthText);
 
   for(var i = 0; i < noteLengths.length; i++){
     var dropdownKey = new createjs.Container();
-    var dropdownKeyText = new createjs.Text(noteLengths[i], TEXTTYPE, "#000000")
-    dropdownKeyText.x = KEYSIZE * 6 + KEYSIZE/8;
-    dropdownKeyText.y = KEYSIZE/3 + (KEYSIZE*4) + KEYSIZE * i;
+    var dropdownKeyText = new createjs.Text(noteLengths[i], FRACTIONTEXTTYPE, "#000000")
+    dropdownKeyText.x = KEYSIZE * 6 + KEYSIZE/4;
+    dropdownKeyText.y = KEYSIZE/4 + (KEYSIZE*4) + KEYSIZE * i;
     var key = new createjs.Shape();
     key.graphics.beginFill("White")
     key.graphics.drawRect(KEYSIZE * 6,(KEYSIZE * 3) + KEYSIZE * i + KEYSIZE, KEYSIZE, KEYSIZE);
