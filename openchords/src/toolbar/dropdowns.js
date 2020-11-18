@@ -15,6 +15,7 @@ function updateMeasureTiming(){
   }
 }
 
+var lastKeyId = 0
 function addDropdowns(){
   // Note length dropdown
   noteLengthDropdown = new createjs.Container(); // Add invisible container for keys
@@ -83,12 +84,16 @@ function addDropdowns(){
     var key = new createjs.Shape();
     key.graphics.beginFill("White")
     key.graphics.drawRect(KEYSIZE * 2,KEYSIZE * i + KEYSIZE, KEYSIZE, KEYSIZE);
+    key.identifier = i
     key.addEventListener("click", function(event) {
       keyText.text = keys[Math.ceil(event.stageY/KEYSIZE)-2]
       currentKey = keyText.text
       dropdownKeys.visible = false;
       updateKeys();
-      clearChords();
+      //clearChords();
+      diff = Math.ceil(event.stageY/KEYSIZE) - lastKeyId
+      lastKeyId = Math.ceil(event.stageY/KEYSIZE)
+      transposeChords(diff);
     });
 
     var dropdownKeyText = new createjs.Text(keys[i], TEXTTYPE, "#000000")
@@ -135,7 +140,8 @@ function addDropdowns(){
       currentInterval = intervalText.text
       intervalDropdown.visible = false
       updateKeys();
-      clearChords();
+      //clearChords();
+      //transposeChords();
     });
     intervalDropdown.addChild(key)
     dropdownKey.addChild(dropdownKeyText);

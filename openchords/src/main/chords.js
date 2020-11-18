@@ -94,6 +94,71 @@ function clearChords(){
     chordLengths[i] = null
   }
 }
+var chordModes = []
+var chordNames = []
+var chordOctaves = []
+var recordedChordNotes = []
+var recordedSeventh = []
+var recordedNinth = []
+var recordedThirteenth = []
+var recAddSeventh = []
+var recAddNinth = []
+var recAddThirteenth = []
+var recordedChordNums = []
+
+function transposeChords(diff){
+  // These are the raw numerical values for the notes in the chord, as an array
+console.log(diff)
+
+  for (var j = 0; j < recordedChords.length; j++){
+    if(recordedChords[j] != null){
+      chordName = chordNames[j]
+      var notes = recordedChordNotes[j]
+    // Build the chord
+
+    for(var i = 0; i < notesInChord+3; i++)
+    {
+      if(recordedChordNums[selectedMeasure][i]){
+        recordedChordNums[selectedMeasure][i] = recordedChordNums[selectedMeasure][i] + diff
+        notes[i] = recordedChordNums[selectedMeasure][i]
+        // First part of the chord
+        /*if (i < 3) {
+          notes[i] = notes[i] + diff
+        }
+        if(i >= 3){
+          notes[i] = notes[i] + diff
+        }*/
+        // Record the note as it falls on the keyboard, no longer numerical but a string value
+        recordedChords[j][i] = keyboard[notes[i]]
+        chordMarkers[j][i].y =  KEYSIZE * (-1 * ((notes[i]+1)) + numKeys)
+        chordMarkers[j][i].visible = true;
+      }
+
+    }
+    /*var note
+    // For adding the seventh, ninth and thirteenth
+    if(recAddSeventh[j]){
+      note = recordedSeventh[j] + diff
+      recordedChords[j][notesInChord+0] = keyboard[note]
+      chordMarkers[j][notesInChord+0].y =  KEYSIZE * (-1 * ((note+1)) + numKeys)
+      chordMarkers[j][notesInChord+0].visible = true
+    }
+    if(recAddNinth[j]){
+      note = recordedNinth[j] + diff
+      recordedChords[j][notesInChord+1] = keyboard[note]
+      chordMarkers[j][notesInChord+1].y =  KEYSIZE * (-1 * ((note+1)) + numKeys)
+      chordMarkers[j][notesInChord+1].visible = true
+    }
+    if(recAddThirteenth[j]){
+      note = recordedThirteenth[j] + diff
+      recordedChords[j][notesInChord+2] = keyboard[note]
+      chordMarkers[j][notesInChord+2].y =  KEYSIZE * (-1 * ((note+1)) + numKeys)
+      chordMarkers[j][notesInChord+2].visible = true
+    }*/
+    chordLabels[j].text = chordKeys[currentInterval][currentKey][chordName] + " " + noteLength
+  } //recordedChords[j]
+  }
+}
 
 function addChordMarkers() {
   chordsContainer = new createjs.Container()
@@ -111,13 +176,15 @@ function addChordMarkers() {
     }
   }
 }
+
 // Add a chord
 function chord(chordName) {
-
-
+  chordOctaves[selectedMeasure] = octave
+  chordNames[selectedMeasure] = chordName
   if(chordLabels[selectedMeasure] == null){
     addMeasure(selectedMeasure)
   }
+  chordModes[selectedMeasure] = chordMode
 
 
 
@@ -137,6 +204,7 @@ function chord(chordName) {
   deleteChord(selectedMeasure)
   chordLengths[selectedMeasure] = noteLength;
   recordedChords[selectedMeasure] = []
+  recordedChordNums[selectedMeasure] = []
   // These are the raw numerical values for the notes in the chord, as an array
   var notes = []
   // Build the chord
@@ -151,32 +219,49 @@ function chord(chordName) {
     }
     // Record the note as it falls on the keyboard, no longer numerical but a string value
     recordedChords[selectedMeasure][i] = keyboard[notes[i]]
+    recordedChordNums[selectedMeasure][i] = notes[i]
     synths[i].triggerAttackRelease(recordedChords[selectedMeasure][i], chordLength)
     chordMarkers[selectedMeasure][i].y =  KEYSIZE * (-1 * ((notes[i]+1)) + numKeys)
     chordMarkers[selectedMeasure][i].visible = true;
   }
+  recordedChordNotes[selectedMeasure] = notes
   var note
   // For adding the seventh, ninth and thirteenth
+  recAddSeventh[selectedMeasure] = false
+  recAddNinth[selectedMeasure] = false
+  recAddThirteenth[selectedMeasure] = false
   if(addSeventh){
     note = chordNotes[chordKeys[currentInterval][currentKey][chordName]][3][0] + ((octave) * 12) + 3
     recordedChords[selectedMeasure][notesInChord+0] = keyboard[note]
+    recordedChordNums[selectedMeasure][notesInChord+0] = note
     synths[notesInChord+0].triggerAttackRelease(recordedChords[selectedMeasure][notesInChord+0], chordLength)
     chordMarkers[selectedMeasure][notesInChord+0].y =  KEYSIZE * (-1 * ((note+1)) + numKeys)
     chordMarkers[selectedMeasure][notesInChord+0].visible = true
+    recordedSeventh[selectedMeasure] = note
+    recAddSeventh[selectedMeasure] = true
   }
   if(addNinth){
+
     note = chordNotes[chordKeys[currentInterval][currentKey][chordName]][3][1] + ((octave) * 12) + 3
     recordedChords[selectedMeasure][notesInChord+1] = keyboard[note]
+    recordedChordNums[selectedMeasure][notesInChord+1] = note
     synths[notesInChord+1].triggerAttackRelease(recordedChords[selectedMeasure][notesInChord+1], chordLength)
     chordMarkers[selectedMeasure][notesInChord+1].y =  KEYSIZE * (-1 * ((note+1)) + numKeys)
     chordMarkers[selectedMeasure][notesInChord+1].visible = true
+    recordedNinth[selectedMeasure] = note
+    recAddNinth[selectedMeasure] = true
+
   }
   if(addThirteenth){
+
     note = chordNotes[chordKeys[currentInterval][currentKey][chordName]][3][2] + ((octave) * 12) + 3
     recordedChords[selectedMeasure][notesInChord+2] = keyboard[note]
+    recordedChordNums[selectedMeasure][notesInChord+2] = note
     synths[notesInChord+2].triggerAttackRelease(recordedChords[selectedMeasure][notesInChord+2], chordLength)
     chordMarkers[selectedMeasure][notesInChord+2].y =  KEYSIZE * (-1 * ((note+1)) + numKeys)
     chordMarkers[selectedMeasure][notesInChord+2].visible = true
+    recordedThirteenth[selectedMeasure] = note
+    recAddThirteenth[selectedMeasure] = true
   }
 
   chordLabels[selectedMeasure].visible = true;
@@ -206,16 +291,17 @@ function playbackRecordedChords(){
   playbackChords = []
   playbackChordLengths = []
   // What this does is optimize an array of recorded chords to an array of chords for playback with correct timing
+  //console.log(recordedChords.length)
   for(var i = 0; i < recordedChords.length; i++) {
     playbackChords[currentChord] = recordedChords[i] // Set playback to current chord
     playbackChordLengths[currentChord] = chordLengths[i]
-    if(chordLengths[i] == "1/8"){
+    if(chordLengths[i] == "⅛"){
       currentChord = currentChord + 1
-    } else if(chordLengths[i] == "1/4"){
+    } else if(chordLengths[i] == "¼"){
       currentChord = currentChord + 2
-    } else if(chordLengths[i] == "1/2"){
+    } else if(chordLengths[i] == "½"){
       currentChord = currentChord + 4
-    } else if(chordLengths[i] == "3/4"){
+    } else if(chordLengths[i] == "¾"){
       currentChord = currentChord + 6
     } else if(chordLengths[i] == "1"){
       currentChord = currentChord + 8
