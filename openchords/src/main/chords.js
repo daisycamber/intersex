@@ -116,18 +116,19 @@ console.log(diff)
       var notes = recordedChordNotes[j]
     // Build the chord
 
-    for(var i = 0; i < notesInChord+3; i++)
+    for(var i = 0; i < notesInChord; i++)
     {
       if(recordedChordNums[selectedMeasure][i]){
-        recordedChordNums[selectedMeasure][i] = recordedChordNums[selectedMeasure][i] + diff
-        notes[i] = recordedChordNums[selectedMeasure][i]
+        //recordedChordNums[selectedMeasure][i] = recordedChordNums[selectedMeasure][i] + diff
+        //notes[i] = recordedChordNums[selectedMeasure][i]
         // First part of the chord
-        /*if (i < 3) {
-          notes[i] = notes[i] + diff
+        // First part of the chord
+        if (i < 3) {
+          notes[i] = chordNotes[chordKeys[currentInterval][currentKey][chordName]][chordModes[j]][i] + (octave * 12) + 3
         }
         if(i >= 3){
-          notes[i] = notes[i] + diff
-        }*/
+          notes[i] = chordNotes[chordKeys[currentInterval][currentKey][chordName]][chordModes[j]][i-3] + ((octave-1) * 12) + 3
+        }
         // Record the note as it falls on the keyboard, no longer numerical but a string value
         recordedChords[j][i] = keyboard[notes[i]]
         chordMarkers[j][i].y =  KEYSIZE * (-1 * ((notes[i]+1)) + numKeys)
@@ -180,9 +181,11 @@ function addChordMarkers() {
   }
 }
 
+
 // Add a chord
 function chord(chordName) {
   touchStarted()
+  //chordModes[selectedMeasure] = chordMode
   chordOctaves[selectedMeasure] = octave
   chordNames[selectedMeasure] = chordName
   if(chordLabels[selectedMeasure] == null){
