@@ -12,6 +12,7 @@ function addSeventhNinthThirteenthButtons(toolbar){
       addSeventhButton.graphics.beginFill("Pink").drawRoundRectComplex(KEYSIZE * 11, KEYSIZE*2, KEYSIZE, KEYSIZE, KEYROUND, KEYROUND, KEYROUND, KEYROUND);
     }
     addSeventh = !addSeventh;
+    updateChord()
   });
   toolbar.addChild(addSeventhButton)
   var addSeventhText =  new createjs.Text("7th", TEXTTYPE, "#000000")
@@ -29,6 +30,7 @@ function addSeventhNinthThirteenthButtons(toolbar){
       addNinthButton.graphics.beginFill("Pink").drawRoundRectComplex(KEYSIZE * 12, KEYSIZE*2, KEYSIZE, KEYSIZE, KEYROUND, KEYROUND, KEYROUND, KEYROUND);
     }
     addNinth = !addNinth;
+    updateChord()
   });
   toolbar.addChild(addNinthButton)
   var addNinthText =  new createjs.Text("9th", TEXTTYPE, "#000000")
@@ -46,6 +48,7 @@ function addSeventhNinthThirteenthButtons(toolbar){
       addThirteenthButton.graphics.beginFill("Pink").drawRoundRectComplex(KEYSIZE * 13, KEYSIZE*2, KEYSIZE, KEYSIZE, KEYROUND, KEYROUND, KEYROUND, KEYROUND);
     }
     addThirteenth = !addThirteenth;
+    updateChord()
   });
   toolbar.addChild(addThirteenthButton)
   var addThirteenthText =  new createjs.Text("13th", TEXTTYPE, "#000000")

@@ -10,6 +10,7 @@ function addInversionButtons(toolbar){
       firstInversion.graphics.beginFill("White").drawRoundRectComplex(KEYSIZE * 7, KEYSIZE, KEYSIZE * 4, KEYSIZE, KEYROUND, KEYROUND, KEYROUND, KEYROUND);
       secondInversion.graphics.beginFill("White").drawRoundRectComplex(KEYSIZE * 7, KEYSIZE * 2, KEYSIZE * 4, KEYSIZE, KEYROUND, KEYROUND, KEYROUND, KEYROUND);
       chordMode = 0
+      updateChord()
     });
     toolbar.addChild(defaultTriad)
     var defaultTriadText =  new createjs.Text("Default", TEXTTYPE, "#000000")
@@ -24,6 +25,7 @@ function addInversionButtons(toolbar){
       secondInversion.graphics.beginFill("White").drawRoundRectComplex(KEYSIZE * 7, KEYSIZE * 2, KEYSIZE * 4, KEYSIZE, KEYROUND, KEYROUND, KEYROUND, KEYROUND);
       defaultTriad.graphics.beginFill("White").drawRoundRectComplex(KEYSIZE * 7, 0, KEYSIZE * 4, KEYSIZE, KEYROUND, KEYROUND, KEYROUND, KEYROUND);
       chordMode = 1
+      updateChord()
     });
     toolbar.addChild(firstInversion)
     var firstInversionText =  new createjs.Text("1st Inversion", TEXTTYPE, "#000000")
@@ -38,6 +40,7 @@ function addInversionButtons(toolbar){
       defaultTriad.graphics.beginFill("White").drawRoundRectComplex(KEYSIZE * 7, 0, KEYSIZE * 4, KEYSIZE, KEYROUND, KEYROUND, KEYROUND, KEYROUND);
       firstInversion.graphics.beginFill("White").drawRoundRectComplex(KEYSIZE * 7, KEYSIZE, KEYSIZE * 4, KEYSIZE, KEYROUND, KEYROUND, KEYROUND, KEYROUND);
       chordMode = 2
+      updateChord()
     });
     toolbar.addChild(secondInversion)
     var secondInversionText =  new createjs.Text("2nd Inversion", TEXTTYPE, "#000000")

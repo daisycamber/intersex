@@ -105,57 +105,51 @@ var recAddSeventh = []
 var recAddNinth = []
 var recAddThirteenth = []
 var recordedChordNums = []
+var recordedOctaves = []
 
 function transposeChords(diff){
   // These are the raw numerical values for the notes in the chord, as an array
-console.log(diff)
-
   for (var j = 0; j < recordedChords.length; j++){
-    if(recordedChords[j] != null){
+    if(chordNames[j] != null){
       chordName = chordNames[j]
-      var notes = recordedChordNotes[j]
+      var notes = []
     // Build the chord
-
+    console.log("Transposing chord")
     for(var i = 0; i < notesInChord; i++)
     {
-      if(recordedChordNums[selectedMeasure][i]){
-        //recordedChordNums[selectedMeasure][i] = recordedChordNums[selectedMeasure][i] + diff
-        //notes[i] = recordedChordNums[selectedMeasure][i]
-        // First part of the chord
-        // First part of the chord
         if (i < 3) {
-          notes[i] = chordNotes[chordKeys[currentInterval][currentKey][chordName]][chordModes[j]][i] + (octave * 12) + 3
+          notes[i] = chordNotes[chordKeys[currentInterval][currentKey][chordName]][chordModes[j]][i] + (recordedOctaves[j] * 12) + 3
         }
         if(i >= 3){
-          notes[i] = chordNotes[chordKeys[currentInterval][currentKey][chordName]][chordModes[j]][i-3] + ((octave-1) * 12) + 3
+          notes[i] = chordNotes[chordKeys[currentInterval][currentKey][chordName]][chordModes[j]][i-3] + ((recordedOctaves[j]-1) * 12) + 3
         }
         // Record the note as it falls on the keyboard, no longer numerical but a string value
         recordedChords[j][i] = keyboard[notes[i]]
         chordMarkers[j][i].y =  KEYSIZE * (-1 * ((notes[i]+1)) + numKeys)
         chordMarkers[j][i].visible = true;
-      }
-
     }
-    /*var note
+    var note
     // For adding the seventh, ninth and thirteenth
     if(recAddSeventh[j]){
-      note = recordedSeventh[j] + diff
-      recordedChords[j][notesInChord+0] = keyboard[note]
-      chordMarkers[j][notesInChord+0].y =  KEYSIZE * (-1 * ((note+1)) + numKeys)
-      chordMarkers[j][notesInChord+0].visible = true
+      note = chordNotes[chordKeys[currentInterval][currentKey][chordName]][3][0] + ((recordedOctaves[j]) * 12) + 3
+      chordMarkers[selectedMeasure][notesInChord+0].y =  KEYSIZE * (-1 * ((note+1)) + numKeys)
+      chordMarkers[selectedMeasure][notesInChord+0].visible = true
     }
     if(recAddNinth[j]){
-      note = recordedNinth[j] + diff
-      recordedChords[j][notesInChord+1] = keyboard[note]
-      chordMarkers[j][notesInChord+1].y =  KEYSIZE * (-1 * ((note+1)) + numKeys)
-      chordMarkers[j][notesInChord+1].visible = true
+      note = chordNotes[chordKeys[currentInterval][currentKey][chordName]][3][1] + ((recordedOctaves[j]) * 12) + 3
+      chordMarkers[selectedMeasure][notesInChord+1].y =  KEYSIZE * (-1 * ((note+1)) + numKeys)
+      chordMarkers[selectedMeasure][notesInChord+1].visible = true
+      recordedNinth[selectedMeasure] = note
+      recAddNinth[selectedMeasure] = true
+
     }
     if(recAddThirteenth[j]){
-      note = recordedThirteenth[j] + diff
-      recordedChords[j][notesInChord+2] = keyboard[note]
-      chordMarkers[j][notesInChord+2].y =  KEYSIZE * (-1 * ((note+1)) + numKeys)
-      chordMarkers[j][notesInChord+2].visible = true
-    }*/
+      note = chordNotes[chordKeys[currentInterval][currentKey][chordName]][3][2] + ((recordedOctaves[j]) * 12) + 3
+      chordMarkers[selectedMeasure][notesInChord+2].y =  KEYSIZE * (-1 * ((note+1)) + numKeys)
+      chordMarkers[selectedMeasure][notesInChord+2].visible = true
+      recordedThirteenth[selectedMeasure] = note
+      recAddThirteenth[selectedMeasure] = true
+    }
     chordLabels[j].text = chordKeys[currentInterval][currentKey][chordName] + " " + noteLength
   } //recordedChords[j]
   }
@@ -188,6 +182,7 @@ function chord(chordName) {
   //chordModes[selectedMeasure] = chordMode
   chordOctaves[selectedMeasure] = octave
   chordNames[selectedMeasure] = chordName
+  recordedOctaves[selectedMeasure] = octave
   if(chordLabels[selectedMeasure] == null){
     addMeasure(selectedMeasure)
   }
@@ -273,6 +268,12 @@ function chord(chordName) {
 
   chordLabels[selectedMeasure].visible = true;
   chordLabels[selectedMeasure].text = chordKeys[currentInterval][currentKey][chordName] + " " + noteLength
+}
+
+function updateChord(){
+  if(chordNames[selectedMeasure]){
+    chord(chordNames[selectedMeasure])
+  }
 }
 // 9 + 1 synths (for chord and bass)
 function addSynths(){

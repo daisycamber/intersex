@@ -9,6 +9,7 @@ function addOctaveButtons(toolbar){
   octaveDownButton.addEventListener("click", function(event) {
     if(octave >= 1){octave--;}
     text.text = octaves[octave]
+    updateChord()
   });
 
   toolbar.addChild(octaveDown);
@@ -30,6 +31,7 @@ function addOctaveButtons(toolbar){
   octaveUpButton.addEventListener("click", function(event) {
     if(octave <= 5){octave++;}
     text.text = octaves[octave]
+    updateChord()
   });
   toolbar.addChild(octaveUp)
 }

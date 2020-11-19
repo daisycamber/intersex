@@ -51,6 +51,7 @@ function addDropdowns(){
       noteLengthText.text = noteLength
       noteLengthDropdown.visible = false
       updateMeasureTiming();
+      updateChord()
     });
     noteLengthDropdown.addChild(key)
     dropdownKey.addChild(dropdownKeyText);
@@ -93,7 +94,7 @@ function addDropdowns(){
       //clearChords();
       diff = Math.ceil(event.stageY/KEYSIZE) - lastKeyId
       lastKeyId = Math.ceil(event.stageY/KEYSIZE)
-      transposeChords(diff);
+      transposeChords();
     });
 
     var dropdownKeyText = new createjs.Text(keys[i], TEXTTYPE, "#000000")
@@ -182,6 +183,7 @@ function addDropdowns(){
       notesText.text = noteNumbers[Math.ceil(event.stageY/KEYSIZE)-5]
       notesDropdown.visible = false
       notesInChord = Math.ceil(event.stageY/KEYSIZE)-4;
+      updateChord()
     });
     notesDropdown.addChild(key)
     dropdownKey.addChild(dropdownKeyText);

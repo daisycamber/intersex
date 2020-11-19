@@ -43,9 +43,11 @@ function addMiscButtons(toolbar){
       clearTimeout(timeout);
       if (tapLength < 500 && tapLength > 0) {
           clearChords();
+          chordNames = []
           event.preventDefault();
       } else {
           deleteChord();
+          chordNames[selectedMeasure] = null
           timeout = setTimeout(function() {
               clearTimeout(timeout);
           }, 500);
