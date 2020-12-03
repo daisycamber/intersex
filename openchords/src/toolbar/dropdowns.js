@@ -8,11 +8,9 @@ var noteLength = "½"
 
 // Update the timing (delay) of a measure if there isnt a chord
 function updateMeasureTiming(){
-  if(recordedChords[selectedMeasure] == null){
-    chordLabels[selectedMeasure].text = noteLength
-    chordLabels[selectedMeasure].visible = true
-    chordLengths[selectedMeasure] = noteLength
-  }
+  chordLabels[selectedMeasure].text = noteLength
+  chordLabels[selectedMeasure].visible = true
+  chordLengths[selectedMeasure] = noteLength
 }
 
 var lastKeyId = 0
@@ -29,7 +27,7 @@ function addDropdowns(){
     } else {
       noteLengthDropdown.visible = false
     }
-    updateMeasureTiming();
+    //updateMeasureTiming();
   });
   toolbar.addChild(noteLengthDropdownButton);
 
@@ -51,7 +49,7 @@ function addDropdowns(){
       noteLengthText.text = noteLength
       noteLengthDropdown.visible = false
       updateMeasureTiming();
-      updateChord()
+      //updateChord()
     });
     noteLengthDropdown.addChild(key)
     dropdownKey.addChild(dropdownKeyText);
