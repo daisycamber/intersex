@@ -394,3 +394,10 @@ opacity: 1;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
