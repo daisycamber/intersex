@@ -8,7 +8,7 @@ var noteLength = "½"
 
 // Update the timing (delay) of a measure if there isnt a chord
 function updateMeasureTiming(){
-  chordLabels[selectedMeasure].text = noteLength
+  chordLabels[selectedMeasure].text = chordKeys[currentInterval][currentKey][chordNames[selectedMeasure]] + " " + noteLength
   chordLabels[selectedMeasure].visible = true
   chordLengths[selectedMeasure] = noteLength
 }
@@ -47,7 +47,7 @@ function addDropdowns(){
     key.addEventListener("click", function(event) {
       noteLength = noteLengths[Math.ceil(event.stageY/KEYSIZE)-5]
       noteLengthText.text = noteLength
-      noteLengthDropdown.visible = false
+      //noteLengthDropdown.visible = false
       updateMeasureTiming();
       //updateChord()
     });

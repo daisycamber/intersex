@@ -11,7 +11,7 @@ function addMiscButtons(toolbar){
   });
   toolbar.addChild(playButton)
   var triangle = new createjs.Shape();
-  triangle.graphics.beginFill("#000000").drawPolyStar(KEYSIZE/2, KEYSIZE/2, KEYSIZE * 0.4, 3, 0, 120);
+  triangle.graphics.beginFill("green").drawPolyStar(KEYSIZE/2, KEYSIZE/2, KEYSIZE * 0.4, 3, 0, 120);
   toolbar.addChild(triangle)
 
   // Pause button
