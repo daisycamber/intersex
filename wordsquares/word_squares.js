@@ -1,4 +1,4 @@
-var TILESIZE = window.innerHeight/18;
+var TILESIZE = window.innerHeight/19;
 var TILEROUND = TILESIZE/10
 var TEXTTYPE = "bold " + TILESIZE * 0.8 + "px Arial"
 var SUBTEXTTYPE = "bold " + TILESIZE * 0.4 + "px Arial"
@@ -19,7 +19,7 @@ var stage;
 function main() {
     stage = new createjs.Stage("canvas");
     stage.canvas.width = window.innerWidth;
-    stage.canvas.height = window.innerHeight - 100;
+    stage.canvas.height = window.innerHeight - 130;
     var image = new Image();
     image.src = "images/background.jpg";
     image.onload = handleImageLoad;
@@ -267,7 +267,7 @@ function onPlay(key, text,tile){
 function drawWordSquare(size,index){
   width = size * (TILESIZE + OFFSET) - OFFSET
   x = (window.innerWidth - width)/2;
-  y = (window.innerHeight - width)/2 - TILESIZE * 1.5;
+  y = (window.innerHeight - width)/2 - TILESIZE * 2;
   tiles[0] = (drawTile(x + 0 * (TILESIZE + OFFSET), y + 0,WORDSQUARES[square_size][square_index * 4].substring(0,1),true, i));
   for(var i = 1; i < size; i++){ // Top
     tiles[i] = (drawTile(x + i * (TILESIZE + OFFSET), y + 0,"",true, i));
@@ -319,7 +319,7 @@ console.log(letters)
 function drawInputSquares(size){
   width = size * (TILESIZE + OFFSET) - OFFSET
   x = (window.innerWidth - width)/2;
-  y = (window.innerHeight - width)/2 + width + OFFSET - TILESIZE * 1.5;
+  y = (window.innerHeight - width)/2 + width + OFFSET - TILESIZE * 2;
   for(var i = 0; i < size; i++){
     drawTile(x + i* (TILESIZE + OFFSET), y + (TILESIZE + OFFSET) * 0 + TILESIZE/2,inputText[i], false, i);
   }
@@ -495,7 +495,7 @@ function drawInterface(){
   x = (window.innerWidth - width)/2;
   drawSubtitle(x,TILESIZE*2,"by Jasper Holton and Melissa Romeo")
   drawSelector((window.innerWidth - (TILESIZE + OFFSET) * 5)/2, TILESIZE*3)
-  drawScore((window.innerWidth - (5 * (TILESIZE + OFFSET) - OFFSET))/2, window.innerHeight - 100 - TILESIZE);
+  drawScore((window.innerWidth - (5 * (TILESIZE + OFFSET) - OFFSET))/2, window.innerHeight - 130 - TILESIZE);
   drawWordSquare(size,0);
   drawInputSquares(size)
 }
