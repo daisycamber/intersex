@@ -88,7 +88,7 @@ function wonGame(){
   console.log("Won game")
   var tileGroup = new createjs.Container();
   var tile = new createjs.Shape();
-  tile.graphics.beginFill("Gold").drawRoundRectComplex(0, 0, TILESIZE * 6, TILESIZE, TILEROUND, TILEROUND, TILEROUND, TILEROUND);
+  tile.graphics.beginFill("Orange").drawRoundRectComplex(0, 0, TILESIZE * 6, TILESIZE, TILEROUND, TILEROUND, TILEROUND, TILEROUND);
   var text =  new createjs.Text("You won! (Tap)", TEXTTYPE, "#000000")
   text.textAlign = 'center';
   text.x = TILESIZE * 3
@@ -201,8 +201,13 @@ function onPlay(key, text,tile){
             }
           }
           if(square_size == 4){
+            console.log("Index is")
+            console.log(selected_index)
             if(selected_index == 6 && tiles[selected_index+2][1].text == "" ){
               selected_index = 8;
+            }
+            if(selected_index == 8 && tiles[11][1].text == "" ){
+              selected_index = 11;
             }
             /*if(selected_index == 5 && tiles[selected_index+1][1].text == "" ){
               selected_index = 6;
