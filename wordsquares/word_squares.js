@@ -319,6 +319,7 @@ selectorTiles = []
 function selectWordLength(length){
   stage.removeAllChildren();
   var bitmap = new createjs.Bitmap(image);
+  bitmap.scale = 1.5;
   stage.addChild(bitmap);
   square_size = length
   size = square_size;
@@ -425,6 +426,7 @@ function keyUp(e){
 function handleImageLoad(event) {
     image = event.target;
     var bitmap = new createjs.Bitmap(image);
+    bitmap.scale = 1.5;
     stage.addChild(bitmap);
 
     document.onkeyup = keyUp;
