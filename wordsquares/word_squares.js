@@ -183,7 +183,7 @@ function onPlay(key, text,tile){
         if(plays == win_plays){
           won = true
           plays = 0
-          totalScore = totalScore + score
+          total_score = total_score + score
           score = 0
           wonGame()
         }
