@@ -380,6 +380,24 @@ function selectWordLength(length){
   stage.update();
 }
 
+function drawHomeButton(){
+  var tileGroup = new createjs.Container();
+  var tile = new createjs.Shape();
+  tile.graphics.beginFill("Pink").drawRoundRectComplex(0, 0, TILESIZE, TILESIZE, TILEROUND, TILEROUND, TILEROUND, TILEROUND);
+  var text =  new createjs.Text("\u2302", TEXTTYPE, "#000000")
+  tile.addEventListener("click", function(event) {
+    window.open("https://intersexmusic.com");
+  });
+  text.textAlign = 'center';
+  text.x = TILESIZE/2
+  text.y = TILESIZE/8
+  tileGroup.x = 0;
+  tileGroup.y = 0;
+  tileGroup.addChild(tile)
+  tileGroup.addChild(text)
+  stage.addChild(tileGroup)
+}
+
 function drawSelector(x,y){
   for(i = 0; i < 4; i++)
   {
@@ -503,6 +521,7 @@ function drawInterface(){
   drawScore((window.innerWidth - (5 * (TILESIZE + OFFSET) - OFFSET))/2, window.innerHeight - ADHEIGHT - TILESIZE);
   drawWordSquare(size,0);
   drawInputSquares(size)
+  drawHomeButton();
 }
 
 function keyUp(e){
