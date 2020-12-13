@@ -480,7 +480,7 @@ function drawScore(x,y){
   var tileGroup = new createjs.Container();
   var tile = new createjs.Shape();
   tile.graphics.beginFill("Gold").drawRoundRectComplex(0, 0, 5 * (TILESIZE + OFFSET) - OFFSET, TILESIZE, TILEROUND, TILEROUND, TILEROUND, TILEROUND);
-  score_text =  new createjs.Text("Score: 0/0", TEXTTYPE, "#000000")
+  score_text =  new createjs.Text("Score: " + score + "/" + total_score, TEXTTYPE, "#000000")
   score_text.x = TILESIZE/6
   score_text.y = TILESIZE/6
   tileGroup.addChild(tile)
