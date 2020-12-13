@@ -350,6 +350,7 @@ function drawTitle(x,y,text){
 selectorTiles = []
 
 function selectWordLength(length){
+  score = 0
   stage.removeAllChildren();
   var bitmap = new createjs.Bitmap(image);
   bitmap.scale = 1.5;
