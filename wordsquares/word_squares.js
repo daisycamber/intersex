@@ -47,6 +47,7 @@ function drawTile(x,y,text,type, index){
   var tile = new createjs.Shape();
   tile.graphics.beginFill("White").drawRoundRectComplex(0, 0, TILESIZE, TILESIZE, TILEROUND, TILEROUND, TILEROUND, TILEROUND);
   var text =  new createjs.Text(text, TEXTTYPE, "#000000")
+  tile.text = text
   text.textAlign = 'center';
   text.x = TILESIZE/2
   text.y = TILESIZE/6
@@ -80,8 +81,9 @@ function drawTile(x,y,text,type, index){
   } else {
     tile.addEventListener("click", function(event) {
       console.log("Test2")
-      onPlay("",text,tile)
-
+      if(event.target.text != ""){
+        onPlay("",text,tile)
+      }
     })
   }
   return [tile,text]
