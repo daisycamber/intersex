@@ -357,6 +357,7 @@ selectorTiles = []
 
 function selectWordLength(length){
   score = 0
+  plays = 0
   stage.removeAllChildren();
   var bitmap = new createjs.Bitmap(image);
   bitmap.scale = BGSCALE;
