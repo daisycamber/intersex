@@ -330,8 +330,10 @@ function drawInputSquares(size){
   for(var i = 0; i < size; i++){
     drawTile(x + (i) * (TILESIZE + OFFSET), y + (TILESIZE + OFFSET) * 1 + TILESIZE/2,inputText[i+size], false, i+size);
   }
-  for(var i = 0; i < size; i++){
-    drawTile(x + (i) * (TILESIZE + OFFSET), y + (TILESIZE + OFFSET) * 2 + TILESIZE/2,inputText[i+size*2], false, i+size);
+  if(size > 2){
+    for(var i = 0; i < size; i++){
+      drawTile(x + (i) * (TILESIZE + OFFSET), y + (TILESIZE + OFFSET) * 2 + TILESIZE/2,inputText[i+size*2], false, i+size);
+    }
   }
 }
 
