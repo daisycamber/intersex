@@ -256,7 +256,7 @@ function onPlay(key, text,tile){
       }
       else { // Decrement the score
         score = score - 1;
-        score_text.text = "Score: " + score + total_score;
+        score_text.text = "Score: " + score + "/" + total_score;
       }
 
       // TODO for some reason the S works along with the I in bottom left
