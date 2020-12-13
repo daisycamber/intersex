@@ -129,6 +129,7 @@ function wonGame(){
   });
 }
 score = 0
+total_score = 0
 function onPlay(key, text,tile){
   if(tiles[selected_index][1].text == ""){
     if(key != ""){
@@ -207,7 +208,7 @@ function onPlay(key, text,tile){
             if(selected_index == 6 && tiles[selected_index+2][1].text == "" ){
               selected_index = 8;
             }
-            if(selected_index == 8 && tiles[11][1].text == "" ){
+            else if(selected_index == 8 && tiles[11][1].text == "" ){
               selected_index = 11;
             }
             /*if(selected_index == 5 && tiles[selected_index+1][1].text == "" ){
