@@ -179,10 +179,11 @@ function onPlay(key, text,tile){
       if(correct){
         plays = plays + 1
         score = score + size;
-        score_text.text = "Score: " + score;
+        score_text.text = "Score: " + score + "/" + total_score;
         if(plays == win_plays){
           won = true
           plays = 0
+          totalScore = totalScore + score
           score = 0
           wonGame()
         }
@@ -255,7 +256,7 @@ function onPlay(key, text,tile){
       }
       else { // Decrement the score
         score = score - 1;
-        score_text.text = "Score: " + score;
+        score_text.text = "Score: " + score + total_score;
       }
 
       // TODO for some reason the S works along with the I in bottom left
@@ -479,7 +480,7 @@ function drawScore(x,y){
   var tileGroup = new createjs.Container();
   var tile = new createjs.Shape();
   tile.graphics.beginFill("Gold").drawRoundRectComplex(0, 0, 5 * (TILESIZE + OFFSET) - OFFSET, TILESIZE, TILEROUND, TILEROUND, TILEROUND, TILEROUND);
-  score_text =  new createjs.Text("Score: 0", TEXTTYPE, "#000000")
+  score_text =  new createjs.Text("Score: 0/0", TEXTTYPE, "#000000")
   score_text.x = TILESIZE/6
   score_text.y = TILESIZE/6
   tileGroup.addChild(tile)
