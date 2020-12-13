@@ -422,6 +422,7 @@ function drawSelector(x,y){
   tile.addEventListener("click", function(event) {
     console.log("Here")
     score = 0;
+    plays = 0;
     stage.removeAllChildren();
     var bitmap = new createjs.Bitmap(image);
     bitmap.scale = 1.5;
