@@ -1,6 +1,6 @@
-file = open("words.txt","r")
-output = open("word_squares-4.txt","w")
-LENGTH = 4
+file = open("scrabble.txt","r")
+output = open("word_squares-5.txt","w")
+LENGTH = 5
 wordlength = LENGTH
 LENGTH = LENGTH + 2
 LETTER = ''
@@ -24,7 +24,7 @@ count = 0
 words = list()
 print("Collecting words of length")
 print(LENGTH)
-z = 10
+z = 80
 count = 0
 for line in file:
     if(len(line) == LENGTH and count%z == 0):
