@@ -4,7 +4,8 @@ var TEXTTYPE = "bold " + TILESIZE * 0.8 + "px Arial"
 var SUBTEXTTYPE = "bold " + TILESIZE * 0.4 + "px Arial"
 var OFFSET = TILESIZE/8
 var ADHEIGHT = 90;
-var BGSCALE = 1.5;
+var BGSCALE = 1.7;
+var BGOFFSET = -200;
 var window_height = window.innerHeight;
 var image;
 function getRandomInt(min, max) {
@@ -361,6 +362,7 @@ function selectWordLength(length){
   stage.removeAllChildren();
   var bitmap = new createjs.Bitmap(image);
   bitmap.scale = BGSCALE;
+  bitmap.x = BGOFFSET;
   stage.addChild(bitmap);
   square_size = length
   size = square_size;
@@ -453,6 +455,7 @@ function drawSelector(x,y){
     stage.removeAllChildren();
     var bitmap = new createjs.Bitmap(image);
     bitmap.scale = BGSCALE;
+    bitmap.x = BGOFFSET;
     stage.addChild(bitmap);
     square_index = getRandomInt(0,WORDSQUARES[square_size].length/4);
     selected_index = 1
@@ -540,6 +543,7 @@ function handleImageLoad(event) {
     image = event.target;
     var bitmap = new createjs.Bitmap(image);
     bitmap.scale = BGSCALE;
+    bitmap.x = BGOFFSET;
     stage.addChild(bitmap);
 
     document.onkeyup = keyUp;
