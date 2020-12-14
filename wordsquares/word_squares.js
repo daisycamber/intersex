@@ -94,6 +94,7 @@ function wonGame(){
   console.log("Won game")
   var tileGroup = new createjs.Container();
   var tile = new createjs.Shape();
+  dropConfetti();
   tile.graphics.beginFill("Orange").drawRoundRectComplex(0, 0, TILESIZE * 6, TILESIZE, TILEROUND, TILEROUND, TILEROUND, TILEROUND);
   var text =  new createjs.Text("You won! (Tap)", TEXTTYPE, "#000000")
   text.textAlign = 'center';
@@ -518,6 +519,33 @@ function drawScore(x,y){
   tileGroup.y = y;
   stage.addChild(tileGroup)
 }
+COLORS = ["Red","Orange","Yellow","Green","Blue","Purple"]
+var confettiCount = 60;
+var confetti = []
+var confettivx = []
+var confettivy = []
+var confettiv = 10;
+var confettimin = -300;
+function drawConfetti(){
+  for(i = 0; i < confettiCount; i++){
+    confetti[i] = new createjs.Shape();
+    confetti[i].graphics.beginFill(COLORS[0,getRandomInt(0,COLORS.length)]).drawCircle(0, 0, getRandomInt(5,10));
+    confetti[i].x = getRandomInt(0,window.innerWidth);
+    confetti[i].y = getRandomInt(confettimin,-10);
+    confettivx[i] = getRandomInt(-3,3)
+    confettivy[i] = getRandomInt(-3,3)/3.0;
+    stage.addChild(confetti[i]);
+  }
+}
+
+function dropConfetti(){
+  for(i = 0; i < confettiCount; i++){
+    confetti[i].y = getRandomInt(confettimin,-10);
+    confetti[i].x = getRandomInt(0,window.innerWidth);
+    confettivx[i] = getRandomInt(-3,3)
+    confettivy[i] = getRandomInt(-3,3)/3.0;
+  }
+}
 
 function drawInterface(){
   width = 5 * (TILESIZE + OFFSET) - OFFSET
@@ -532,6 +560,7 @@ function drawInterface(){
   drawWordSquare(size,0);
   drawInputSquares(size)
   drawHomeButton();
+  drawConfetti();
 }
 
 function keyUp(e){
@@ -545,6 +574,16 @@ function handleImageLoad(event) {
     bitmap.scale = BGSCALE;
     bitmap.x = BGOFFSET;
     stage.addChild(bitmap);
+    createjs.Ticker.addEventListener("tick", handleTick);
+    function handleTick(event) {
+        for(i = 0; i < confettiCount; i++){
+          if(confetti[i].y < window.innerHeight + 20){
+            confetti[i].x = confetti[i].x + confettivx[i]
+            confetti[i].y = confetti[i].y + confettivy[i] + confettiv
+          }
+        }
+        stage.update();
+    }
 
     document.onkeyup = keyUp;
     drawInterface();
