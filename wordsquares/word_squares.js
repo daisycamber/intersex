@@ -531,7 +531,7 @@ function drawConfetti(){
     confetti[i] = new createjs.Shape();
     confetti[i].graphics.beginFill(COLORS[0,getRandomInt(0,COLORS.length)]).drawCircle(0, 0, getRandomInt(5,10));
     confetti[i].x = getRandomInt(0,window.innerWidth);
-    confetti[i].y = getRandomInt(confettimin,-10);
+    confetti[i].y = getRandomInt(window.innerHeight + 30);
     confettivx[i] = getRandomInt(-3,3)
     confettivy[i] = getRandomInt(-3,3)/3.0;
     stage.addChild(confetti[i]);
