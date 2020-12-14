@@ -111,6 +111,7 @@ function wonGame(){
     stage.removeAllChildren();
     var bitmap = new createjs.Bitmap(image);
     bitmap.scale = BGSCALE;
+    bitmap.x = BGOFFSET;
     stage.addChild(bitmap);
     square_index = getRandomInt(0,WORDSQUARES[square_size].length/4);
     selected_index = 1
