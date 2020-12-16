@@ -582,14 +582,18 @@ function handleImageLoad(event) {
     createjs.Ticker.addEventListener("tick", handleTick);
     function handleTick(event) {
       if(!droppedConfetti){
+        dropped = true;
         for(i = 0; i < confettiCount; i++){
           if(confetti[i].y < window.innerHeight + 20){
             confetti[i].x = confetti[i].x + confettivx[i]
             confetti[i].y = confetti[i].y + confettivy[i] + confettiv
+            dropped = false;
           } else {
-            droppedConfetti = true;
             confetti[i].visible = false;
           }
+        }
+        if(dropped){
+          droppedConfetti = true;
         }
         stage.update();
       }
