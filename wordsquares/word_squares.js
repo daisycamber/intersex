@@ -398,7 +398,7 @@ function drawHomeButton(){
   tile.graphics.beginFill("Pink").drawRoundRectComplex(0, 0, TILESIZE, TILESIZE, TILEROUND, TILEROUND, TILEROUND, TILEROUND);
   var text =  new createjs.Text("\u2302", TEXTTYPE, "#000000")
   tile.addEventListener("click", function(event) {
-    window.open("https://intersexmusic.com");
+    window.open("https://intersexmusic.com/wordsquares/");
   });
   text.textAlign = 'center';
   text.x = TILESIZE/2
