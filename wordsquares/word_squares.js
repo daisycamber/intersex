@@ -8,6 +8,7 @@ var BGSCALE = 1.7;
 var BGOFFSET = -200;
 var window_height = window.innerHeight;
 var image;
+var droppedConfetti = true;
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -533,6 +534,7 @@ function drawConfetti(){
     confetti[i].graphics.beginFill(COLORS[0,getRandomInt(0,COLORS.length)]).drawCircle(0, 0, getRandomInt(5,10));
     confetti[i].x = getRandomInt(0,window.innerWidth);
     confetti[i].y = getRandomInt(window.innerHeight + 30);
+    confetti[i].visible = false;
     confettivx[i] = getRandomInt(-3,3)
     confettivy[i] = getRandomInt(-3,3)/3.0;
     stage.addChild(confetti[i]);
@@ -540,7 +542,9 @@ function drawConfetti(){
 }
 
 function dropConfetti(){
+  droppedConfetti = false;
   for(i = 0; i < confettiCount; i++){
+    confetti[i].visible = true;
     confetti[i].y = getRandomInt(confettimin,-10);
     confetti[i].x = getRandomInt(0,window.innerWidth);
     confettivx[i] = getRandomInt(-3,3)
@@ -577,13 +581,18 @@ function handleImageLoad(event) {
     stage.addChild(bitmap);
     createjs.Ticker.addEventListener("tick", handleTick);
     function handleTick(event) {
+      if(!droppedConfetti){
         for(i = 0; i < confettiCount; i++){
           if(confetti[i].y < window.innerHeight + 20){
             confetti[i].x = confetti[i].x + confettivx[i]
             confetti[i].y = confetti[i].y + confettivy[i] + confettiv
+          } else {
+            droppedConfetti = true;
+            confetti[i].visible = false;
           }
         }
         stage.update();
+      }
     }
 
     document.onkeyup = keyUp;
