@@ -16,4 +16,4 @@ var DONATEURL = "https://www.paypal.com/donate/?token=JkaNXFUTpjU705Qc2jqmL0yPHN
 var PLAYBACKSPEED = 250
 var KEYNOTELENGTH = "8n"
 var NOTELENGTH = "4n"
-var ADHEIGHT = 205;
+var ADHEIGHT = 210;
