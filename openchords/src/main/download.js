@@ -24,13 +24,12 @@ window.onload = function(){
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   var i = 0;
-  while(urlParams.get('name' + i) != null){
+  for(i = 0; i < urlParams.get('length'); i++){
     track.addNote({
       name : urlParams.get('name' + i),
       time : urlParams.get('time' + i),
       duration: urlParams.get('duration' + i),
     });
-    i = i + 1;
   }
   // Save the project
   var saveByteArray = (function () {
