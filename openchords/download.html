@@ -54,6 +54,8 @@ function getDate(){
 var midi = new Midi()
 // add a track
 const track = midi.addTrack()
+
+const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 var i = 0;
 while(urlParams.get('name' + i) != null){
