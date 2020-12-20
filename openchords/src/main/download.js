@@ -27,8 +27,8 @@ window.onload = function(){
   for(i = 0; i < urlParams.get('length'); i++){
     track.addNote({
       name : urlParams.get('name' + i),
-      time : urlParams.get('time' + i),
-      duration: urlParams.get('duration' + i),
+      time : parseFloat(urlParams.get('time' + i)),
+      duration: parseFloat(urlParams.get("duration" + i)),
     });
   }
   // Save the project
