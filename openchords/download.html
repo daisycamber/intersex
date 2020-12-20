@@ -51,7 +51,9 @@ function getDate(){
   today = mm+'-'+dd+'-'+yyyy;
   return today
 }
-
+var midi = new Midi()
+// add a track
+const track = midi.addTrack()
 const urlParams = new URLSearchParams(queryString);
 var i = 0;
 while(urlParams.get('name' + i) != null){
