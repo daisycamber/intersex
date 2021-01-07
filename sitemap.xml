@@ -9,278 +9,348 @@
 
 <url>
   <loc>https://intersexmusic.com/</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://intersexmusic.com/buy</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://intersexmusic.com/discography</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/blog/14</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/blog/</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/share</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://intersexmusic.com/autobiography/introduction</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://intersexmusic.com/blog/16</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://intersexmusic.com/blog/15</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://intersexmusic.com/blog/13</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://intersexmusic.com/privacy</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://intersexmusic.com/gallery</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/openchords/</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://intersexmusic.com/wordsquares/</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/autobiography/introduction</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/23</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/22</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/21</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/20</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/19</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/18</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/17</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/privacy</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/gallery</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/more</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/13</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/15</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://intersexmusic.com/autobiography/introduction.html</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter1</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter2</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter3</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter4</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter5</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter6</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter7</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter8</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter9</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter10</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter11</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter12</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter13</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter14</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter15</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter16</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter17</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter18</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter19</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter20</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter21</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter22</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter23</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter24</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter25</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter26</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://intersexmusic.com/blog/12</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://intersexmusic.com/blog/11</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://intersexmusic.com/blog/10</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://intersexmusic.com/blog/9</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://intersexmusic.com/blog/8</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://intersexmusic.com/blog/7</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://intersexmusic.com/blog/6</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://intersexmusic.com/blog/5</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://intersexmusic.com/blog/4</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://intersexmusic.com/blog/3</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://intersexmusic.com/blog/2</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://intersexmusic.com/blog/1</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://intersexmusic.com/autobiography/index</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter27</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://intersexmusic.com/autobiography/chapter28</loc>
-  <lastmod>2020-04-30T19:09:08+00:00</lastmod>
-  <priority>0.41</priority>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/16</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/12</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/11</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/10</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/9</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/8</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/7</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/6</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/5</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/4</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/3</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/2</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/1</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/wordsquares/play</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/autobiography/index</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/about</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/blog/17-links</loc>
+  <lastmod>2021-01-07T18:34:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://intersexmusic.com/3D/</loc>
+  <lastmod>2021-01-07T18:34:40+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
