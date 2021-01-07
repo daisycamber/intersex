@@ -1,11 +1,16 @@
-var TILESIZE = window.innerHeight/18;
+var SHOWAD = true;
+var ADHEIGHT = 0;
+if(SHOWAD){
+  ADHEIGHT = 100;
+}
+var TILESIZE = (window.innerHeight-ADHEIGHT)/17;
 var TILEROUND = TILESIZE/10
 var TEXTTYPE = "bold " + TILESIZE * 0.8 + "px Arial"
 var SUBTEXTTYPE = "bold " + TILESIZE * 0.4 + "px Arial"
 var OFFSET = TILESIZE/8
-var ADHEIGHT = 100;
 var BGSCALE = 1.7;
 var BGOFFSET = -200;
+
 var window_height = window.innerHeight;
 var image;
 var droppedConfetti = true;
@@ -106,7 +111,7 @@ function wonGame(){
   stage.addChild(tileGroup)
 
   tileGroup.x = (window.innerWidth - TILESIZE * 6)/2
-  tileGroup.y = (window_height * 3/4)
+  tileGroup.y = (TILESIZE * 14.9)
   tile.addEventListener("click",function(event) {
     console.log("World!");
     stage.removeAllChildren();
@@ -117,12 +122,8 @@ function wonGame(){
     square_index = getRandomInt(0,WORDSQUARES[square_size].length/4);
     selected_index = 1
     letters = []
-    for(i = 0; i < 4; i++){
-      for(j = 0; j < square_size; j++){
-        letters[4 * i + j] = (WORDSQUARES[square_size][square_index * 4 + i].substring(j,j+1));
-        console.log(letters[4 * i + j])
-      }
-    }
+    gatherLetters()
+
     count = 0
 
     let uniqueChars = letters.filter((c, index) => {
@@ -295,12 +296,19 @@ function drawWordSquare(size,index){
   }
 }
 letters = []
-for(i = 0; i < 4; i++){
-  for(j = 0; j < square_size; j++){
-    letters[4 * i + j] = (WORDSQUARES[square_size][square_index * 4 + i].substring(j,j+1));
-    console.log(letters[4 * i + j])
+function gatherLetters(){
+  for(i = 0; i < 4; i++){
+    j = 0;
+    if(i == 0 || i == 1){
+      j = 1;
+    }
+    for(j; j < square_size; j++){
+      letters[4 * i + j] = (WORDSQUARES[square_size][square_index * 4 + i].substring(j,j+1));
+      console.log(letters[4 * i + j])
+    }
   }
 }
+gatherLetters();
 count = 0
 
 let uniqueChars = letters.filter((c, index) => {
@@ -373,12 +381,7 @@ function selectWordLength(length){
   square_index = getRandomInt(0,WORDSQUARES[square_size].length/4);
   selected_index = 1
   letters = []
-  for(i = 0; i < 4; i++){
-    for(j = 0; j < square_size; j++){
-      letters[4 * i + j] = (WORDSQUARES[square_size][square_index * 4 + i].substring(j,j+1));
-      console.log(letters[4 * i + j])
-    }
-  }
+  gatherLetters();
   count = 0
 
   let uniqueChars = letters.filter((c, index) => {
@@ -398,6 +401,24 @@ function drawHomeButton(){
   tile.graphics.beginFill("Pink").drawRoundRectComplex(0, 0, TILESIZE, TILESIZE, TILEROUND, TILEROUND, TILEROUND, TILEROUND);
   var text =  new createjs.Text("\u2302", TEXTTYPE, "#000000")
   tile.addEventListener("click", function(event) {
+    window.open("https://intersexmusic.com/");
+  });
+  text.textAlign = 'center';
+  text.x = TILESIZE/2
+  text.y = TILESIZE/8
+  tileGroup.x = 0;
+  tileGroup.y = 0;
+  tileGroup.addChild(tile)
+  tileGroup.addChild(text)
+  stage.addChild(tileGroup)
+}
+
+function drawHowToButton(){
+  var tileGroup = new createjs.Container();
+  var tile = new createjs.Shape();
+  tile.graphics.beginFill("Pink").drawRoundRectComplex(0, 0, TILESIZE, TILESIZE, TILEROUND, TILEROUND, TILEROUND, TILEROUND);
+  var text =  new createjs.Text("?", TEXTTYPE, "#000000")
+  tile.addEventListener("click", function(event) {
     window.open("https://intersexmusic.com/wordsquares/");
   });
   text.textAlign = 'center';
@@ -407,6 +428,7 @@ function drawHomeButton(){
   tileGroup.y = 0;
   tileGroup.addChild(tile)
   tileGroup.addChild(text)
+  tileGroup.x = window.innerWidth-TILESIZE
   stage.addChild(tileGroup)
 }
 
@@ -463,12 +485,8 @@ function drawSelector(x,y){
     square_index = getRandomInt(0,WORDSQUARES[square_size].length/4);
     selected_index = 1
     letters = []
-    for(i = 0; i < 4; i++){
-      for(j = 0; j < square_size; j++){
-        letters[4 * i + j] = (WORDSQUARES[square_size][square_index * 4 + i].substring(j,j+1));
-        console.log(letters[4 * i + j])
-      }
-    }
+    gatherLetters();
+
     count = 0
 
     let uniqueChars = letters.filter((c, index) => {
@@ -565,6 +583,7 @@ function drawInterface(){
   drawWordSquare(size,0);
   drawInputSquares(size)
   drawHomeButton();
+  drawHowToButton();
   drawConfetti();
 }
 
