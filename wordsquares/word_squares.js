@@ -23,7 +23,7 @@ var square_size = 3
 var square_index = getRandomInt(0,WORDSQUARES[square_size].length/4);
 var win_plays = square_size * 2 + (square_size - 2) * 2 - 1
 
-
+var inputTiles = []
 var stage;
 
 function main() {
@@ -70,6 +70,7 @@ function drawTile(x,y,text,type, index){
   if(type){
     if(index == selected_index && tile.text.text == "" ){
       tile.graphics.beginFill("Pink").drawRoundRectComplex(0, 0, TILESIZE, TILESIZE, TILEROUND, TILEROUND, TILEROUND, TILEROUND);
+
     }
     tile.addEventListener("click", function(event) {
       console.log("Test")
@@ -80,6 +81,7 @@ function drawTile(x,y,text,type, index){
         clearSelection()
         tile.graphics.beginFill("Pink").drawRoundRectComplex(0, 0, TILESIZE, TILESIZE, TILEROUND, TILEROUND, TILEROUND, TILEROUND);
         selected_index = tile.index
+        loadIncorrectGuesses();
         stage.update()
       }
 
@@ -98,6 +100,7 @@ function drawTile(x,y,text,type, index){
 
 function wonGame(){
   console.log("Won game")
+  clearIncorrectGuesses();
   var tileGroup = new createjs.Container();
   var tile = new createjs.Shape();
   dropConfetti();
@@ -139,6 +142,25 @@ function wonGame(){
 }
 score = 0
 total_score = 0
+var incorrectGuesses = []
+var incorrectGuessCount;
+function clearIncorrectGuesses(){
+  for(x=0;x<13;x++){
+    incorrectGuesses[x] = []
+  }
+  incorrectGuessCount = [0,0,0,0,0,0,0,0,0,0,0,0,0]
+}
+clearIncorrectGuesses();
+function guessedBefore(text){
+    for(y = 0; y < incorrectGuessCount[selected_index]; y++){
+      console.log(incorrectGuesses[selected_index][y])
+      if(text == incorrectGuesses[selected_index][y]){
+        console.log("Guessed before")
+        return true;
+      }
+    }
+  return false;
+}
 function onPlay(key, text,tile){
   if(tiles[selected_index][1].text == ""){
     if(key != ""){
@@ -189,6 +211,7 @@ function onPlay(key, text,tile){
         plays = plays + 1
         score = score + size;
         score_text.text = "Score: " + score + "/" + total_score;
+
         if(plays == win_plays){
           won = true
           plays = 0
@@ -257,15 +280,21 @@ function onPlay(key, text,tile){
           }*/
           if(!won){
             tiles[selected_index][0].graphics.beginFill("Pink").drawRoundRectComplex(0, 0, TILESIZE, TILESIZE, TILEROUND, TILEROUND, TILEROUND, TILEROUND);
-
+            loadIncorrectGuesses();
 
           }
         }
 
       }
-      else { // Decrement the score
+      else if(!guessedBefore(ctext)) { // Decrement the score
+        console.log(incorrectGuesses[selected_index][incorrectGuessCount[selected_index]])
+        console.log(ctext)
         score = score - 1;
         score_text.text = "Score: " + score + "/" + total_score;
+        tile.graphics.beginFill("Grey").drawRoundRectComplex(0, 0, TILESIZE, TILESIZE, TILEROUND, TILEROUND, TILEROUND, TILEROUND);
+        incorrectGuesses[selected_index][incorrectGuessCount[selected_index]] = ctext
+        incorrectGuessCount[selected_index] = incorrectGuessCount[selected_index] + 1
+        console.log("Inc. guess: " + ctext)
       }
 
       // TODO for some reason the S works along with the I in bottom left
@@ -273,6 +302,22 @@ function onPlay(key, text,tile){
     stage.update()
     key = 0
   }
+
+}
+
+
+
+function loadIncorrectGuesses(){
+  console.log("GOT HERE")
+      for(z = 0; z < inputTiles.length; z++){
+        if(guessedBefore(inputTiles[z][1].text)){
+          console.log("Guessed before")
+          inputTiles[z][0].graphics.beginFill("Grey").drawRoundRectComplex(0, 0, TILESIZE, TILESIZE, TILEROUND, TILEROUND, TILEROUND, TILEROUND);
+        }
+        else {
+          inputTiles[z][0].graphics.beginFill("White").drawRoundRectComplex(0, 0, TILESIZE, TILESIZE, TILEROUND, TILEROUND, TILEROUND, TILEROUND);
+        }
+      }
 
 }
 
@@ -335,19 +380,24 @@ function shuffle(array) {
 inputText = uniqueChars//["C","A","D","E","K","E","H","P"]//,"M","B","I"]//["A","H","S","L","G","N
 inputText = shuffle(inputText)
 console.log(letters)
+
 function drawInputSquares(size){
   width = size * (TILESIZE + OFFSET) - OFFSET
   x = (window.innerWidth - width)/2;
   y = (window_height - width)/2 + width + OFFSET - TILESIZE * 1.5;
+  c = 0;
   for(var i = 0; i < size; i++){
-    drawTile(x + i* (TILESIZE + OFFSET), y + (TILESIZE + OFFSET) * 0 + TILESIZE/2,inputText[i], false, i);
+    inputTiles[c] = drawTile(x + i* (TILESIZE + OFFSET), y + (TILESIZE + OFFSET) * 0 + TILESIZE/2,inputText[i], false, i);
+    c = c + 1;
   }
   for(var i = 0; i < size; i++){
-    drawTile(x + (i) * (TILESIZE + OFFSET), y + (TILESIZE + OFFSET) * 1 + TILESIZE/2,inputText[i+size], false, i+size);
+    inputTiles[c] = drawTile(x + (i) * (TILESIZE + OFFSET), y + (TILESIZE + OFFSET) * 1 + TILESIZE/2,inputText[i+size], false, i+size);
+    c = c + 1;
   }
   if(size > 2){
     for(var i = 0; i < size; i++){
-      drawTile(x + (i) * (TILESIZE + OFFSET), y + (TILESIZE + OFFSET) * 2 + TILESIZE/2,inputText[i+size*2], false, i+size);
+      inputTiles[c] = drawTile(x + (i) * (TILESIZE + OFFSET), y + (TILESIZE + OFFSET) * 2 + TILESIZE/2,inputText[i+size*2], false, i+size);
+      c = c + 1;
     }
   }
 }
@@ -368,6 +418,7 @@ function drawTitle(x,y,text){
 selectorTiles = []
 
 function selectWordLength(length){
+  clearIncorrectGuesses();
   score = 0
   plays = 0
   stage.removeAllChildren();
@@ -446,6 +497,7 @@ function drawSelector(x,y){
     var text =  new createjs.Text(i+2, TEXTTYPE, "#000000")
     selectorTiles[i].index = i
     selectorTiles[i].addEventListener("click", function(event) {
+
       for(j = 0; j < 4; j++){
         selectorTiles[j].graphics.beginFill("White").drawRoundRectComplex(0, 0, TILESIZE, TILESIZE, TILEROUND, TILEROUND, TILEROUND, TILEROUND);
       }
@@ -474,6 +526,7 @@ function drawSelector(x,y){
   tile.graphics.beginFill("Pink").drawRoundRectComplex(0, 0, TILESIZE, TILESIZE, TILEROUND, TILEROUND, TILEROUND, TILEROUND);
   var text =  new createjs.Text("\u21bb", TEXTTYPE, "#000000")
   tile.addEventListener("click", function(event) {
+    clearIncorrectGuesses();
     console.log("Here")
     score = 0;
     plays = 0;
