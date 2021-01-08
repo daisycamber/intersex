@@ -1,4 +1,4 @@
-var SHOWAD = true;
+var SHOWAD = false;
 var ADHEIGHT = 0;
 if(SHOWAD){
   ADHEIGHT = 100;
@@ -114,7 +114,7 @@ function wonGame(){
   stage.addChild(tileGroup)
 
   tileGroup.x = (window.innerWidth - TILESIZE * 6)/2
-  tileGroup.y = (TILESIZE * 14.9)
+  tileGroup.y = (TILESIZE * 14.5)
   tile.addEventListener("click",function(event) {
     console.log("World!");
     stage.removeAllChildren();
@@ -143,12 +143,12 @@ function wonGame(){
 score = 0
 total_score = 0
 var incorrectGuesses = []
-var incorrectGuessCount;
+var incorrectGuessCount = [];
 function clearIncorrectGuesses(){
-  for(x=0;x<16;x++){
+  for(x=0;x<(5*2+(5-2)*2);x++){
     incorrectGuesses[x] = []
+    incorrectGuessCount[x] = 0
   }
-  incorrectGuessCount = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 }
 clearIncorrectGuesses();
 function guessedBefore(text){
@@ -324,7 +324,7 @@ function loadIncorrectGuesses(){
 function drawWordSquare(size,index){
   width = size * (TILESIZE + OFFSET) - OFFSET
   x = (window.innerWidth - width)/2;
-  y = (window_height - width)/2 - TILESIZE * 1.5;
+  y = TILESIZE * 4.5;
   tiles[0] = (drawTile(x + 0 * (TILESIZE + OFFSET), y + 0,WORDSQUARES[square_size][square_index * 4].substring(0,1),true, i));
   for(var i = 1; i < size; i++){ // Top
     tiles[i] = (drawTile(x + i * (TILESIZE + OFFSET), y + 0,"",true, i));
@@ -384,7 +384,7 @@ console.log(letters)
 function drawInputSquares(size){
   width = size * (TILESIZE + OFFSET) - OFFSET
   x = (window.innerWidth - width)/2;
-  y = (window_height - width)/2 + width + OFFSET - TILESIZE * 1.5;
+  y = TILESIZE * 10;
   c = 0;
   for(var i = 0; i < size; i++){
     inputTiles[c] = drawTile(x + i* (TILESIZE + OFFSET), y + (TILESIZE + OFFSET) * 0 + TILESIZE/2,inputText[i], false, i);
@@ -407,7 +407,8 @@ function drawTitle(x,y,text){
   var tile = new createjs.Shape();
   tile.graphics.beginFill("White").drawRoundRectComplex(0, 0, 5 * (TILESIZE + OFFSET) - OFFSET, TILESIZE, TILEROUND, TILEROUND, TILEROUND, TILEROUND);
   var text =  new createjs.Text(text, TEXTTYPE, "#000000")
-  text.x = TILESIZE/6
+  text.textAlign = 'center'
+  text.x = TILESIZE*2.75
   text.y = TILESIZE/6
   tileGroup.addChild(tile)
   tileGroup.addChild(text)
@@ -569,7 +570,8 @@ function drawSubtitle(x,y,text){
   var tile = new createjs.Shape();
   tile.graphics.beginFill("White").drawRoundRectComplex(0, 0, 7 * (TILESIZE + OFFSET) - OFFSET, TILESIZE/2, TILEROUND, TILEROUND, TILEROUND, TILEROUND);
   var text =  new createjs.Text(text, SUBTEXTTYPE, "#000000")
-  text.x = TILESIZE/6
+  text.textAlign = 'center';
+  text.x = TILESIZE*3.9
   text.y = TILESIZE/6/2
   tileGroup.addChild(tile)
   tileGroup.addChild(text)
