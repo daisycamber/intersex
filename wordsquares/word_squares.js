@@ -145,10 +145,10 @@ total_score = 0
 var incorrectGuesses = []
 var incorrectGuessCount;
 function clearIncorrectGuesses(){
-  for(x=0;x<13;x++){
+  for(x=0;x<16;x++){
     incorrectGuesses[x] = []
   }
-  incorrectGuessCount = [0,0,0,0,0,0,0,0,0,0,0,0,0]
+  incorrectGuessCount = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 }
 clearIncorrectGuesses();
 function guessedBefore(text){
