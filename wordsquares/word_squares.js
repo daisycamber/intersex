@@ -1,4 +1,4 @@
-var SHOWAD = false;
+var SHOWAD = true;
 var ADHEIGHT = 0;
 if(SHOWAD){
   ADHEIGHT = 100;
