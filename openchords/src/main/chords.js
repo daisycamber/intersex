@@ -279,8 +279,8 @@ function updateChord(){
 function addSynths(){
   for (var i = 0; i < 10; i++){
     synths[i] = SampleLibrary.load({
-      instruments: "piano",
-      ext: ".[wav|mp3|ogg]"
+      instruments: "piano"//,
+      //ext: ".[wav|mp3|ogg]"
     });
 
     synths[i].toMaster();
