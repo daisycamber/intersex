@@ -278,7 +278,11 @@ function updateChord(){
 // 9 + 1 synths (for chord and bass)
 function addSynths(){
   for (var i = 0; i < 10; i++){
-    synths[i] = new Tone.Synth().toMaster()
+    synths[i] = SampleLibrary.load({
+      instruments: "piano"
+    });
+
+    synths[i].toMaster();
   }
 }
 var currentChord = 0

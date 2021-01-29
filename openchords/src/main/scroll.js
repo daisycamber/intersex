@@ -4,6 +4,7 @@ function scroll(){
   var lastY = 0
   var lastX = 0
   stage.on("stagemousedown", function(evt) {//stagemousedown
+    touchStarted();
     mouseDown = true
     lastX = evt.stageX
     lastY = evt.stageY

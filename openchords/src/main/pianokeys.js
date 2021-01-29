@@ -2,7 +2,12 @@ var pianoKeysContainer
 var pianoKeys = []
 var keysText = []
 // This synth is for the keyboard
-var synth = new Tone.Synth().toMaster()
+var synth = SampleLibrary.load({
+  instruments: "piano"
+});
+  
+synth.toMaster();
+//var synth = new Tone.Synth().toMaster()
 
 
 
@@ -43,5 +48,5 @@ function addPianoKeys(){
 
 // Update the keys according to a new interval (deprecated)
 function updateKeys(){
-  
+
 }
