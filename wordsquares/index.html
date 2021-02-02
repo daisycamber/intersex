@@ -17,134 +17,147 @@
   <!-- Custom styles for this template -->
   <link href="/index.css" rel="stylesheet">
   <style>
-  .img-thumbnail {
-    border: 0;
-  }
+    .img-thumbnail {
+      border: 0;
+    }
   </style>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141377624-1"></script>
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-141377624-1');
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-141377624-1');
   </script>
   <script>
-/**
-* Function that captures a click on an outbound link in Analytics.
-* This function takes a valid URL string as an argument, and uses that URL string
-* as the event label. Setting the transport method to 'beacon' lets the hit be sent
-* using 'navigator.sendBeacon' in browser that support it.
-*/
-var captureOutboundLink = function(url) {
-   ga('send', 'event', 'outbound', 'click', url, {
-     'transport': 'beacon',
-     'hitCallback': function(){document.location = url;}
-   });
-}
-</script>
+    /**
+     * Function that captures a click on an outbound link in Analytics.
+     * This function takes a valid URL string as an argument, and uses that URL string
+     * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+     * using 'navigator.sendBeacon' in browser that support it.
+     */
+    var captureOutboundLink = function(url) {
+      ga('send', 'event', 'outbound', 'click', url, {
+        'transport': 'beacon',
+        'hitCallback': function() {
+          document.location = url;
+        }
+      });
+    }
+  </script>
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5WWZNP8');</script>
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5WWZNP8');
+  </script>
   <!-- End Google Tag Manager -->
   <script data-ad-client="ca-pub-6209985848112194" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@{{version-number}}/dist/amplitude.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@{{version-number}}/dist/amplitude.js"></script>
 </head>
 
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WWZNP8"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WWZNP8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <div><nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/">Intersex</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">Intersex</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/share">Share</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/discography">Music</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/blog/">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/autobiography/">Autobiography</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/gallery">Gallery</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/more">More<span class="sr-only">(current)</span></a>
-        </li>
-        <!--
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/share">Share</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/discography">Music</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/blog/">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/autobiography/">Autobiography</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/gallery">Gallery</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/more">More<span class="sr-only">(current)</span></a>
+          </li>
+          <!--
         <li class="nav-item">
           <a class="nav-link disabled" href="#">Disabled</a>
         </li>-->
-      </ul>
-      <form class="form-inline my-2 my-lg-0" method="get" action="/search.html">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" NAME="q">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-</div>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" method="get" action="/search.html">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" NAME="q">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </div>
   <div class="container">
     <div class="card border-0 shadow my-5">
-    <div class="card-body p-5">
-      <h1 style="text-align:center">WordSquares</h1>
-      <div style="text-align:center; margin-bottom:15px;"><a class="btn btn-primary" title="Play WordSquares now in your web browser" href="play">Play Now</a></div>
-      <img class="img-fluid rounded" align="left" style="width:30%; margin-right:20px; margin-bottom:15px;" src="/blog/images/wordsquares.webp" alt="WordSquares - A word guessing game"></img>
-      <h2 style="text-align:center">About</h2>
-      <p>WordSquares is a word game created by Jasper Holton and Melissa Romeo. You can play this game for free in your web browser <a href="play" title="Play WordSquares now in your web browser">here</a>. WordSquares is also available as an <a href="https://play.google.com/store/apps/details?id=com.intersexmusic.wordsquares" title="WordSquares, a fun, engaging and challenging word puzzle game">ad-free Android app</a> which you can download by pressing the button below.</p>
-      <div style="text-align:center; margin-bottom:15px;"><a href='https://play.google.com/store/apps/details?id=com.intersexmusic.wordsquares&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a></div>
-      <h2 style="text-align:center">How to Play</h2>
-      <p>The aim of the game is to complete the square starting with the first letter. Try to score higher by guessing correctly, each correct guess is 2 to 5 points and each incorrect is -1 points.</p>
-      <ul>
-        <li>Select a game mode by tapping one of the numbers at the top of the screen. The number is the length of the word you would like to play with.</li>
-        <li>Select an empty square where you would like to guess a letter.</li>
-        <li>Tap a letter from the bottom of the screen to guess that letter.</li>
-        <li>Continue guessing letters until you have completed the square.</li>
-        <li>Tap the popup at the bottom of the screen to play a new square, or select a new game mode, a number, at the top of the screen.</li>
-        <li>To give up and try a new square, tap the refresh button to the right of the numbers.</li>
-      </ul>
-      <p>Have fun, and good luck!</p>
-    </div>
+      <div class="card-body p-5">
+        <h1 style="text-align:center">WordSquares</h1>
+        <div style="text-align:center; margin-bottom:15px;"><a class="btn btn-primary" title="Play WordSquares now in your web browser" href="play">Play Now</a></div>
+        <img class="img-fluid rounded" align="left" style="width:30%; margin-right:20px; margin-bottom:15px;" src="/blog/images/wordsquares.webp" alt="WordSquares - A word guessing game"></img>
+        <h2 style="text-align:center">About</h2>
+        <p>WordSquares is a word game created by Jasper Holton and Melissa Romeo. You can play this game for free in your web browser <a href="play" title="Play WordSquares now in your web browser">here</a>. WordSquares is also available as an <a
+            href="https://play.google.com/store/apps/details?id=com.intersexmusic.wordsquares" title="WordSquares, a fun, engaging and challenging word puzzle game">ad-free Android app</a> which you can download by pressing the button below.</p>
+        <div style="text-align:center; margin-bottom:15px;"><a href='https://play.google.com/store/apps/details?id=com.intersexmusic.wordsquares&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img
+              alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a></div>
+        <h2 style="text-align:center">How to Play</h2>
+        <p>The aim of the game is to complete the square starting with the first letter. Try to score higher by guessing correctly, each correct guess is 2 to 5 points and each incorrect is -1 points.</p>
+        <ul>
+          <li>Select a game mode by tapping one of the numbers at the top of the screen. The number is the length of the word you would like to play with.</li>
+          <li>Select an empty square where you would like to guess a letter.</li>
+          <li>Tap a letter from the bottom of the screen to guess that letter.</li>
+          <li>Continue guessing letters until you have completed the square.</li>
+          <li>Tap the popup at the bottom of the screen to play a new square, or select a new game mode, a number, at the top of the screen.</li>
+          <li>To give up and try a new square, tap the refresh button to the right of the numbers.</li>
+        </ul>
+        <p>Have fun, and good luck!</p>
+      </div>
     </div>
   </div>
-  <div class="container"  style="padding-bottom: 65px;">
+  <div class="container" style="padding-bottom: 65px;">
     <div class="card border-0 shadow my-5">
-    <div class="card-body p-5">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Display Ad -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-6209985848112194"
-         data-ad-slot="4928076598"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+      <div class="card-body p-5">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Display Ad -->
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6209985848112194" data-ad-slot="4928076598" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
   </div>
-  </div>
-</div>
 
 
   <!-- Navigation

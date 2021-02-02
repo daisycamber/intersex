@@ -17,255 +17,280 @@
   <!-- Custom styles for this template -->
   <link href="/index.css" rel="stylesheet">
   <style>
-  .img-thumbnail {
-    border: 0;
-  }
+    .img-thumbnail {
+      border: 0;
+    }
   </style>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141377624-1"></script>
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-141377624-1');
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-141377624-1');
   </script>
   <script>
-/**
-* Function that captures a click on an outbound link in Analytics.
-* This function takes a valid URL string as an argument, and uses that URL string
-* as the event label. Setting the transport method to 'beacon' lets the hit be sent
-* using 'navigator.sendBeacon' in browser that support it.
-*/
-var captureOutboundLink = function(url) {
-   ga('send', 'event', 'outbound', 'click', url, {
-     'transport': 'beacon',
-     'hitCallback': function(){document.location = url;}
-   });
-}
-</script>
+    /**
+     * Function that captures a click on an outbound link in Analytics.
+     * This function takes a valid URL string as an argument, and uses that URL string
+     * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+     * using 'navigator.sendBeacon' in browser that support it.
+     */
+    var captureOutboundLink = function(url) {
+      ga('send', 'event', 'outbound', 'click', url, {
+        'transport': 'beacon',
+        'hitCallback': function() {
+          document.location = url;
+        }
+      });
+    }
+  </script>
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5WWZNP8');</script>
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5WWZNP8');
+  </script>
   <!-- End Google Tag Manager -->
   <script data-ad-client="ca-pub-6209985848112194" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@{{version-number}}/dist/amplitude.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@{{version-number}}/dist/amplitude.js"></script>
 </head>
 
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WWZNP8"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WWZNP8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <div><nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/">Intersex</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">Intersex</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/share">Share</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/discography">Music<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/blog/">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/autobiography/">Autobiography</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/gallery">Gallery</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/more">More</a>
-        </li>
-        <!--
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/share">Share</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/discography">Music<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/blog/">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/autobiography/">Autobiography</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/more">More</a>
+          </li>
+          <!--
         <li class="nav-item">
           <a class="nav-link disabled" href="#">Disabled</a>
         </li>-->
-      </ul>
-      <form class="form-inline my-2 my-lg-0" method="get" action="/search.html">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" NAME="q">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" method="get" action="/search.html">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" NAME="q">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
   </div>
   <div class="container">
     <div class="card border-0 shadow my-5">
-    <div class="card-body p-5">
-      <h1 style="text-align:center">Intersex</h1>
-      <b>Hear a free sample by clicking the play button below, choose a streaming service to listen, or listen on Spotify below</b>
-      <audio style="align:center" src="media/sample-rainfall.mp3" controls></audio>
-    </div>
+      <div class="card-body p-5">
+        <h1 style="text-align:center">Intersex</h1>
+        <b>Hear a free sample by clicking the play button below, choose a streaming service to listen, or listen on Spotify below</b>
+        <audio style="align:center" src="media/sample-rainfall.mp3" controls></audio>
+      </div>
     </div>
   </div>
 
   <div class="container">
     <div class="card border-0 shadow my-5">
-        <div class="card-body p-5">
-          <h2>Listen Now</h2>
-          <p>If you'd like to <a href="/buy" title="Buy the discography">buy the discography</a> on this website, click the button below for more information.</p>
-          <div style="text-align:center; margin-bottom:15px;"><a class="btn btn-primary" title="Buy the discography" href="/buy">Buy</a></div>
-          <b>Select a streaming service below to listen.</b>
-          <a href="https://open.spotify.com/artist/3AoAlwjVdJAdkjr8ACsVkZ?si=3gYIEOLzSRyCVK6FuyVlxQ" onclick="captureOutboundLink('https://open.spotify.com/artist/3AoAlwjVdJAdkjr8ACsVkZ?si=3gYIEOLzSRyCVK6FuyVlxQ'); return true;"><img class="img-fluid img-thumbnail" src="images/logos/spotify.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Spotify"></img></a>
-          <a href="https://listen.tidal.com/artist/17205312" onclick="captureOutboundLink('https://listen.tidal.com/artist/17205312'); return true;"><img class="img-fluid img-thumbnail" src="images/logos/tidal.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Tidal"></img></a>
-          <a href="http://us.napster.com/artist/intersex?ocode=social_user&pcode=social_user&cpath=Link&rsrc=artist"  onclick="captureOutboundLink('http://us.napster.com/artist/intersex?ocode=social_user&pcode=social_user&cpath=Link&rsrc=artist'); return true;"><img class="img-fluid img-thumbnail" src="images/logos/napster.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Napster"></img></a>
-          <a href="https://www.deezer.com/en/artist/77113782" onclick="captureOutboundLink('https://www.deezer.com/en/artist/77113782'); return true;"><img class="img-fluid img-thumbnail" src="images/logos/deezer.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Deezer"></img></a>
-          <a href="https://music.amazon.com/artists/B07ZK5HV3Q?ref=dm_sh_7657-e6c7-dmcp-fe53-e900a&musicTerritory=US&marketplaceId=ATVPDKIKX0DER" onclick="captureOutboundLink('https://music.amazon.com/artists/B07ZK5HV3Q?ref=dm_sh_7657-e6c7-dmcp-fe53-e900a&musicTerritory=US&marketplaceId=ATVPDKIKX0DER'); return true;"><img class="img-fluid img-thumbnail" src="images/logos/amazon-music.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Amazon Music"></img></a>
-          <a href="https://music.apple.com/us/artist/intersex/1484856754" onclick="captureOutboundLink('https://music.apple.com/us/artist/intersex/1484856754'); return true;"><img class="img-fluid img-thumbnail" src="images/logos/apple-music.webp" style="max-width: 30%; max-height: 30%;"></img></a>
-          <a href="https://soundcloud.com/intersex" onclick="captureOutboundLink('https://soundcloud.com/intersex'); return true;"><img class="img-fluid img-thumbnail" src="images/logos/soundcloud.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Soundcloud"></img></a>
-          <a href="https://www.pandora.com/artist/intersex/ARrckxXrvVX6pV9" onclick="captureOutboundLink('https://www.pandora.com/artist/intersex/ARrckxXrvVX6pV9'); return true;"><img class="img-fluid img-thumbnail" src="images/logos/pandora.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Pandora"></img></a>
-          <a href="https://m.youtube.com/c/intersexmusician" onclick="captureOutboundLink('https://m.youtube.com/c/intersexmusician'); return true;"><img class="img-fluid img-thumbnail" src="images/logos/youtube.webp" style="max-width: 30%; max-height: 30%;" alt="Watch on Youtube"></img></a>
+      <div class="card-body p-5">
+        <h2>Listen Now</h2>
+        <p>If you'd like to <a href="/buy" title="Buy the discography">buy the discography</a> on this website, click the button below for more information.</p>
+        <div style="text-align:center; margin-bottom:15px;"><a class="btn btn-primary" title="Buy the discography" href="/buy">Buy</a></div>
+        <b>Select a streaming service below to listen.</b>
+        <a href="https://open.spotify.com/artist/3AoAlwjVdJAdkjr8ACsVkZ?si=3gYIEOLzSRyCVK6FuyVlxQ" onclick="captureOutboundLink('https://open.spotify.com/artist/3AoAlwjVdJAdkjr8ACsVkZ?si=3gYIEOLzSRyCVK6FuyVlxQ'); return true;"><img
+            class="img-fluid img-thumbnail" src="images/logos/spotify.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Spotify"></img></a>
+        <a href="https://listen.tidal.com/artist/17205312" onclick="captureOutboundLink('https://listen.tidal.com/artist/17205312'); return true;"><img class="img-fluid img-thumbnail" src="images/logos/tidal.webp"
+            style="max-width: 30%; max-height: 30%;" alt="Listen on Tidal"></img></a>
+        <a href="http://us.napster.com/artist/intersex?ocode=social_user&pcode=social_user&cpath=Link&rsrc=artist"
+          onclick="captureOutboundLink('http://us.napster.com/artist/intersex?ocode=social_user&pcode=social_user&cpath=Link&rsrc=artist'); return true;"><img class="img-fluid img-thumbnail" src="images/logos/napster.webp"
+            style="max-width: 30%; max-height: 30%;" alt="Listen on Napster"></img></a>
+        <a href="https://www.deezer.com/en/artist/77113782" onclick="captureOutboundLink('https://www.deezer.com/en/artist/77113782'); return true;"><img class="img-fluid img-thumbnail" src="images/logos/deezer.webp"
+            style="max-width: 30%; max-height: 30%;" alt="Listen on Deezer"></img></a>
+        <a href="https://music.amazon.com/artists/B07ZK5HV3Q?ref=dm_sh_7657-e6c7-dmcp-fe53-e900a&musicTerritory=US&marketplaceId=ATVPDKIKX0DER"
+          onclick="captureOutboundLink('https://music.amazon.com/artists/B07ZK5HV3Q?ref=dm_sh_7657-e6c7-dmcp-fe53-e900a&musicTerritory=US&marketplaceId=ATVPDKIKX0DER'); return true;"><img class="img-fluid img-thumbnail"
+            src="images/logos/amazon-music.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Amazon Music"></img></a>
+        <a href="https://music.apple.com/us/artist/intersex/1484856754" onclick="captureOutboundLink('https://music.apple.com/us/artist/intersex/1484856754'); return true;"><img class="img-fluid img-thumbnail" src="images/logos/apple-music.webp"
+            style="max-width: 30%; max-height: 30%;"></img></a>
+        <a href="https://soundcloud.com/intersex" onclick="captureOutboundLink('https://soundcloud.com/intersex'); return true;"><img class="img-fluid img-thumbnail" src="images/logos/soundcloud.webp" style="max-width: 30%; max-height: 30%;"
+            alt="Listen on Soundcloud"></img></a>
+        <a href="https://www.pandora.com/artist/intersex/ARrckxXrvVX6pV9" onclick="captureOutboundLink('https://www.pandora.com/artist/intersex/ARrckxXrvVX6pV9'); return true;"><img class="img-fluid img-thumbnail" src="images/logos/pandora.webp"
+            style="max-width: 30%; max-height: 30%;" alt="Listen on Pandora"></img></a>
+        <a href="https://m.youtube.com/c/intersexmusician" onclick="captureOutboundLink('https://m.youtube.com/c/intersexmusician'); return true;"><img class="img-fluid img-thumbnail" src="images/logos/youtube.webp"
+            style="max-width: 30%; max-height: 30%;" alt="Watch on Youtube"></img></a>
 
-        </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="card border-0 shadow my-5">
-        <div class="card-body p-5">
-          <h2 style="text-align:center">Discography</h2>
-  <iframe src="https://open.spotify.com/embed/playlist/3n7NsAZtE62CS3xyfbG50B" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-  </div>
-  </div>
-  </div>
-  <div class="container">
-    <div class="card border-0 shadow my-5">
-    <div class="card-body p-5">
-	    <a id="love-song"></a>
-      <h1 style="text-align:center">Love Song (Single)</h1>
-      <img class="img-fluid rounded center" style="margin-bottom:15px;" src="images/discography/love_song.webp"></img>
-      <iframe src="https://open.spotify.com/embed/track/2KFHsB3aOh92EcTJnMHLiP" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="card border-0 shadow my-5">
-    <div class="card-body p-5">
-	    <a id="rainfall"></a>
-      <h1 style="text-align:center">Rainfall (Single)</h1>
-      <img class="img-fluid rounded" style="margin-bottom:15px;" src="images/discography/rainfall.webp"></img>
-      <iframe src="https://open.spotify.com/embed/track/1BkuhcZtK3GIBRcay1ZDlw" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="card border-0 shadow my-5">
-    <div class="card-body p-5">
-	    <a id="your-release"></a>
-      <h1 style="text-align:center">Your Release (Single)</h1>
-      <img class="img-fluid rounded" style="margin-bottom:15px;" src="images/discography/your_release.webp"></img>
-      <iframe src="https://open.spotify.com/embed/track/0ju24NG1bc1P9nCDOCKoTP" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="card border-0 shadow my-5">
-    <div class="card-body p-5">
-	    <a id="make-amends"></a>
-      <h1 style="text-align:center">Make Amends (Single)</h1>
-      <img class="img-fluid rounded" style="margin-bottom:15px;" src="images/discography/make_amends.webp"></img>
-      <b>Returning to stores soon!</b>
-    </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="card border-0 shadow my-5">
-    <div class="card-body p-5">
-	    <a class="#on-my-mind"></a>
-      <h1 style="text-align:center">On My Mind (Single)</h1>
-      <img class="img-fluid rounded" style="margin-bottom:15px;" src="images/discography/on_my_mind.webp"></img>
-      <iframe src="https://open.spotify.com/embed/album/741qclq3EOvJ7mUx9XeEl9" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="card border-0 shadow my-5">
-    <div class="card-body p-5">
-	    <a id="humans"></a>
-      <h1 style="text-align:center">Humans (EP)</h1>
-      <img class="img-fluid rounded" style="margin-bottom:15px;" src="images/discography/humans.webp"></img>
-      <iframe src="https://open.spotify.com/embed/album/5wuA97g0qj8Dqs6FDqtz4k" width="100%" height="210" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="card border-0 shadow my-5">
-        <div class="card-body p-5">
-          <a id="instrumentals"></a>
-          <h2>Instrumentals</h2>
-          <p>You can find my earlier work and instrumental projects here as well. I keep these on seperate profiles, because they are different and unique from the pop music I have been creating. Click on a logo below to listen on the streaming service of your choice.</p>
-        </div>
-      </div>
-      </div>
-      <div class="container">
-        <div class="card border-0 shadow my-5">
-            <div class="card-body p-5">
-              <h2 style="text-align:center">Jasper Camber</h2>
-              <img class="img-fluid rounded" style="margin-bottom:15px; width:100%;" src="images/instrumentals/jasper-camber.webp"></img>
-              <p>Jasper Camber is a collection of electronic instrumentals created by myself. Popular songs include "Mask" and "Geometric Code".</p>
-              <b>Select a streaming service below to listen.</b>
-          <a href="https://open.spotify.com/artist/3CUtsz8Qz7RfhzsMxdt27k?si=76mLdv-hQaOldST8aKZUoA"><img class="img-fluid img-thumbnail" src="images/logos/spotify.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Spotify"></img></a>
-          <a href="https://tidal.com/browse/artist/19811523"><img class="img-fluid img-thumbnail" src="images/logos/tidal.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Tidal"></img></a>
-          <a href="http://us.napster.com/artist/jasper-camber?ocode=social_user&pcode=social_user&cpath=Link&rsrc=artist"><img class="img-fluid img-thumbnail" src="images/logos/napster.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Napster"></img></a>
-          <a href="https://deezer.page.link/yUHM8H86ERmibTns9"><img class="img-fluid img-thumbnail" src="images/logos/deezer.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Deezer"></img></a>
-          <a href="https://music.amazon.com/artists/B089D2FQKK/jasper-camber"><img class="img-fluid img-thumbnail" src="images/logos/amazon-music.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Amazon Music"></img></a>
-          <a href="https://music.apple.com/us/artist/jasper-camber/1515873279"><img class="img-fluid img-thumbnail" src="images/logos/apple-music.webp" style="max-width: 30%; max-height: 30%;"></img></a>
-          <a href="https://pandora.app.link/5XEHBoZCzcb"><img class="img-fluid img-thumbnail" src="images/logos/pandora.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Pandora"></img></a>
-          <a href="https://www.youtube.com/channel/UC5SY9N-IfC_lCsKYa8fMIoA"><img class="img-fluid img-thumbnail" src="images/logos/youtube.webp" style="max-width: 30%; max-height: 30%;" alt="Watch and listen on Youtube"></img></a>
       </div>
     </div>
   </div>
   <div class="container">
     <div class="card border-0 shadow my-5">
-        <div class="card-body p-5">
-          <h2 style="text-align:center">Jean Jasper</h2>
-          <img class="img-fluid rounded" style="margin-bottom:15px;width:100%;" src="images/instrumentals/jean-jasper.webp"></img>
-          <p>Jean Jasper is my first music project. It is experimental electronic music, with popular tracks including "Portals" and "Launch".</p>
-          <b>Select a streaming service below to listen.</b>
-      <a href="https://open.spotify.com/artist/4wElKsqqaJZkXsoKEmakEh?si=MlxL8J4-Q6aJg-edPMxMKw"><img class="img-fluid img-thumbnail" src="images/logos/spotify.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Spotify"></img></a>
-      <a href="https://tidal.com/browse/artist/10944370"><img class="img-fluid img-thumbnail" src="images/logos/tidal.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Tidal"></img></a>
-      <a href="http://us.napster.com/artist/jean-jasper?ocode=social_user&pcode=social_user&cpath=Link&rsrc=artist"><img class="img-fluid img-thumbnail" src="images/logos/napster.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Napster"></img></a>
-      <a href="https://deezer.page.link/55pcS3zbmkNTn26bA"><img class="img-fluid img-thumbnail" src="images/logos/deezer.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Deezer"></img></a>
-      <a href="https://music.amazon.com/artists/B07NDFGB58/jean-jasper"><img class="img-fluid img-thumbnail" src="images/logos/amazon-music.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Amazon Music"></img></a>
-      <a href="https://music.apple.com/us/artist/jean-jasper/1451623269"><img class="img-fluid img-thumbnail" src="images/logos/apple-music.webp" style="max-width: 30%; max-height: 30%;"></img></a>
-      <!--<a href="https://pandora.app.link/5XEHBoZCzcb"><img class="img-fluid img-thumbnail" src="images/logos/pandora.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Pandora"></img></a>-->
-      <a href="https://www.youtube.com/channel/UCTgWsGSFxD1Dz54OFNRUMhQ"><img class="img-fluid img-thumbnail" src="images/logos/youtube.webp" style="max-width: 30%; max-height: 30%;" alt="Watch on Youtube"></img></a>
+      <div class="card-body p-5">
+        <h2 style="text-align:center">Discography</h2>
+        <iframe src="https://open.spotify.com/embed/playlist/3n7NsAZtE62CS3xyfbG50B" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card border-0 shadow my-5">
+      <div class="card-body p-5">
+        <a id="love-song"></a>
+        <h1 style="text-align:center">Love Song (Single)</h1>
+        <img class="img-fluid rounded center" style="margin-bottom:15px;" src="images/discography/love_song.webp"></img>
+        <iframe src="https://open.spotify.com/embed/track/2KFHsB3aOh92EcTJnMHLiP" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card border-0 shadow my-5">
+      <div class="card-body p-5">
+        <a id="rainfall"></a>
+        <h1 style="text-align:center">Rainfall (Single)</h1>
+        <img class="img-fluid rounded" style="margin-bottom:15px;" src="images/discography/rainfall.webp"></img>
+        <iframe src="https://open.spotify.com/embed/track/1BkuhcZtK3GIBRcay1ZDlw" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card border-0 shadow my-5">
+      <div class="card-body p-5">
+        <a id="your-release"></a>
+        <h1 style="text-align:center">Your Release (Single)</h1>
+        <img class="img-fluid rounded" style="margin-bottom:15px;" src="images/discography/your_release.webp"></img>
+        <iframe src="https://open.spotify.com/embed/track/0ju24NG1bc1P9nCDOCKoTP" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card border-0 shadow my-5">
+      <div class="card-body p-5">
+        <a id="make-amends"></a>
+        <h1 style="text-align:center">Make Amends (Single)</h1>
+        <img class="img-fluid rounded" style="margin-bottom:15px;" src="images/discography/make_amends.webp"></img>
+        <b>Returning to stores soon!</b>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card border-0 shadow my-5">
+      <div class="card-body p-5">
+        <a class="#on-my-mind"></a>
+        <h1 style="text-align:center">On My Mind (Single)</h1>
+        <img class="img-fluid rounded" style="margin-bottom:15px;" src="images/discography/on_my_mind.webp"></img>
+        <iframe src="https://open.spotify.com/embed/album/741qclq3EOvJ7mUx9XeEl9" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card border-0 shadow my-5">
+      <div class="card-body p-5">
+        <a id="humans"></a>
+        <h1 style="text-align:center">Humans (EP)</h1>
+        <img class="img-fluid rounded" style="margin-bottom:15px;" src="images/discography/humans.webp"></img>
+        <iframe src="https://open.spotify.com/embed/album/5wuA97g0qj8Dqs6FDqtz4k" width="100%" height="210" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card border-0 shadow my-5">
+      <div class="card-body p-5">
+        <a id="instrumentals"></a>
+        <h2>Instrumentals</h2>
+        <p>You can find my earlier work and instrumental projects here as well. I keep these on seperate profiles, because they are different and unique from the pop music I have been creating. Click on a logo below to listen on the streaming service
+          of your choice.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card border-0 shadow my-5">
+      <div class="card-body p-5">
+        <h2 style="text-align:center">Jasper Camber</h2>
+        <img class="img-fluid rounded" style="margin-bottom:15px; width:100%;" src="images/instrumentals/jasper-camber.webp"></img>
+        <p>Jasper Camber is a collection of electronic instrumentals created by myself. Popular songs include "Mask" and "Geometric Code".</p>
+        <b>Select a streaming service below to listen.</b>
+        <a href="https://open.spotify.com/artist/3CUtsz8Qz7RfhzsMxdt27k?si=76mLdv-hQaOldST8aKZUoA"><img class="img-fluid img-thumbnail" src="images/logos/spotify.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Spotify"></img></a>
+        <a href="https://tidal.com/browse/artist/19811523"><img class="img-fluid img-thumbnail" src="images/logos/tidal.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Tidal"></img></a>
+        <a href="http://us.napster.com/artist/jasper-camber?ocode=social_user&pcode=social_user&cpath=Link&rsrc=artist"><img class="img-fluid img-thumbnail" src="images/logos/napster.webp" style="max-width: 30%; max-height: 30%;"
+            alt="Listen on Napster"></img></a>
+        <a href="https://deezer.page.link/yUHM8H86ERmibTns9"><img class="img-fluid img-thumbnail" src="images/logos/deezer.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Deezer"></img></a>
+        <a href="https://music.amazon.com/artists/B089D2FQKK/jasper-camber"><img class="img-fluid img-thumbnail" src="images/logos/amazon-music.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Amazon Music"></img></a>
+        <a href="https://music.apple.com/us/artist/jasper-camber/1515873279"><img class="img-fluid img-thumbnail" src="images/logos/apple-music.webp" style="max-width: 30%; max-height: 30%;"></img></a>
+        <a href="https://pandora.app.link/5XEHBoZCzcb"><img class="img-fluid img-thumbnail" src="images/logos/pandora.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Pandora"></img></a>
+        <a href="https://www.youtube.com/channel/UC5SY9N-IfC_lCsKYa8fMIoA"><img class="img-fluid img-thumbnail" src="images/logos/youtube.webp" style="max-width: 30%; max-height: 30%;" alt="Watch and listen on Youtube"></img></a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card border-0 shadow my-5">
+      <div class="card-body p-5">
+        <h2 style="text-align:center">Jean Jasper</h2>
+        <img class="img-fluid rounded" style="margin-bottom:15px;width:100%;" src="images/instrumentals/jean-jasper.webp"></img>
+        <p>Jean Jasper is my first music project. It is experimental electronic music, with popular tracks including "Portals" and "Launch".</p>
+        <b>Select a streaming service below to listen.</b>
+        <a href="https://open.spotify.com/artist/4wElKsqqaJZkXsoKEmakEh?si=MlxL8J4-Q6aJg-edPMxMKw"><img class="img-fluid img-thumbnail" src="images/logos/spotify.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Spotify"></img></a>
+        <a href="https://tidal.com/browse/artist/10944370"><img class="img-fluid img-thumbnail" src="images/logos/tidal.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Tidal"></img></a>
+        <a href="http://us.napster.com/artist/jean-jasper?ocode=social_user&pcode=social_user&cpath=Link&rsrc=artist"><img class="img-fluid img-thumbnail" src="images/logos/napster.webp" style="max-width: 30%; max-height: 30%;"
+            alt="Listen on Napster"></img></a>
+        <a href="https://deezer.page.link/55pcS3zbmkNTn26bA"><img class="img-fluid img-thumbnail" src="images/logos/deezer.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Deezer"></img></a>
+        <a href="https://music.amazon.com/artists/B07NDFGB58/jean-jasper"><img class="img-fluid img-thumbnail" src="images/logos/amazon-music.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Amazon Music"></img></a>
+        <a href="https://music.apple.com/us/artist/jean-jasper/1451623269"><img class="img-fluid img-thumbnail" src="images/logos/apple-music.webp" style="max-width: 30%; max-height: 30%;"></img></a>
+        <!--<a href="https://pandora.app.link/5XEHBoZCzcb"><img class="img-fluid img-thumbnail" src="images/logos/pandora.webp" style="max-width: 30%; max-height: 30%;" alt="Listen on Pandora"></img></a>-->
+        <a href="https://www.youtube.com/channel/UCTgWsGSFxD1Dz54OFNRUMhQ"><img class="img-fluid img-thumbnail" src="images/logos/youtube.webp" style="max-width: 30%; max-height: 30%;" alt="Watch on Youtube"></img></a>
 
+      </div>
+    </div>
   </div>
-</div>
-</div>
-  <div class="container"  style="padding-bottom: 65px;">
+  <div class="container" style="padding-bottom: 65px;">
     <div class="card border-0 shadow my-5">
-    <div class="card-body p-5">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Display Ad -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-6209985848112194"
-         data-ad-slot="4928076598"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+      <div class="card-body p-5">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Display Ad -->
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6209985848112194" data-ad-slot="4928076598" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
   </div>
-  </div>
-</div>
 
 
   <!-- Navigation
