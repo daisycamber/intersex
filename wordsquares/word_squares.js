@@ -3,7 +3,7 @@ var ADHEIGHT = 0;
 if(SHOWAD){
   ADHEIGHT = 100;
 }
-var TILESIZE = (window.innerHeight-ADHEIGHT)/17;
+var TILESIZE = (window.innerHeight)/17; //(window.innerHeight-ADHEIGHT)/17;
 var TILEROUND = TILESIZE/10
 var TEXTTYPE = "bold " + TILESIZE * 0.8 + "px Arial"
 var SUBTEXTTYPE = "bold " + TILESIZE * 0.4 + "px Arial"
@@ -29,7 +29,7 @@ var stage;
 function main() {
     stage = new createjs.Stage("canvas");
     stage.canvas.width = window.innerWidth;
-    stage.canvas.height = window.innerHeight - ADHEIGHT;
+    stage.canvas.height = window.innerHeight;
     var image = new Image();
     image.src = "images/background.jpg";
     image.onload = handleImageLoad;
