@@ -634,7 +634,7 @@ function drawInterface(){
   x = (window.innerWidth - width)/2;
   drawSubtitle(x,TILESIZE*2,"by Jasper Holton and Melissa Romeo")
   drawSelector((window.innerWidth - (TILESIZE + OFFSET) * 5)/2, TILESIZE*3)
-  drawScore((window.innerWidth - (5 * (TILESIZE + OFFSET) - OFFSET))/2, window_height - ADHEIGHT - TILESIZE);
+  drawScore((window.innerWidth - (5 * (TILESIZE + OFFSET) - OFFSET))/2, window_height - TILESIZE);
   drawWordSquare(size,0);
   drawInputSquares(size)
   drawHomeButton();
