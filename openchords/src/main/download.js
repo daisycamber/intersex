@@ -20,7 +20,7 @@ window.onload = function(){
   var midi = new Midi()
   // add a track
   const track = midi.addTrack()
-  const extra = "";
+  var extra = "";
   if (window.location.hash) {
      extra = window.location.hash.replace("#", "%23")
   }
