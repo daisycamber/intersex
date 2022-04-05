@@ -99,6 +99,6 @@ function exportMidi(){
       window.URL.revokeObjectURL(url);
     };
   }());
-  saveByteArray([midi.toArray()], "uglek.com - OpenChords - " + getDate() + ".mid");
+  saveByteArray([midi.toArray()], "Uglek.com - OpenChords - " + getDate() + ".mid");
   //fs.writeFileSync("openchords-" + getDate() + ".mid", new Buffer(midi.toArray()))
 }
