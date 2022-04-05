@@ -24,7 +24,7 @@ window.onload = function(){
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   var i = 0;
-  for(i = 0; i < urlParams.get('length'); i++){
+  for(i = 0; i < parseInt(urlParams.get('length')); i++){
     track.addNote({
       name : urlParams.get('name' + i),
       time : parseFloat(urlParams.get('time' + i)),
