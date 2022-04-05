@@ -22,7 +22,9 @@ window.onload = function(){
   const track = midi.addTrack()
 
   const queryString = window.location.search;
+  console.log(queryString);
   const urlParams = new URLSearchParams(queryString);
+  console.log(urlParams.get('length'));
   var i = 0;
   for(i = 0; i < parseInt(urlParams.get('length')); i++){
     track.addNote({
