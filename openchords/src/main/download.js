@@ -20,8 +20,9 @@ window.onload = function(){
   var midi = new Midi()
   // add a track
   const track = midi.addTrack()
-
-  window.location.search.replace("#","%23");
+  if (window.location.hash) {
+    window.location.search = window.location.search + "%23" window.location.hash.replace("#", "%23");
+  }
   const queryString = window.location.search;
   console.log(queryString);
   const urlParams = new URLSearchParams(queryString);
