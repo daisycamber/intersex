@@ -20,12 +20,13 @@ window.onload = function(){
   var midi = new Midi()
   // add a track
   const track = midi.addTrack()
+  const extra = "";
   if (window.location.hash) {
-    window.location.search = window.location.search + window.location.hash.replace("#", "%23");
+     extra = window.location.hash.replace("#", "%23")
   }
   const queryString = window.location.search;
   console.log(queryString);
-  const urlParams = new URLSearchParams(queryString);
+  const urlParams = new URLSearchParams(queryString + extra);
   console.log(urlParams.get('length'));
   
   var i = 0;
@@ -51,5 +52,5 @@ window.onload = function(){
       window.URL.revokeObjectURL(url);
     };
   }());
-  saveByteArray([midi.toArray()], "uglek.com/post/147/ - OpenChords - " + getDate() + ".mid");
+  saveByteArray([midi.toArray()], "Uglek.com - OpenChords - " + getDate() + ".mid");
 }
