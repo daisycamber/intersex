@@ -48,5 +48,5 @@ window.onload = function(){
       window.URL.revokeObjectURL(url);
     };
   }());
-  saveByteArray([midi.toArray()], "intersexmusic.com/openchords-" + getDate() + ".mid");
+  saveByteArray([midi.toArray()], "uglek.com/post/147/ - OpenChords - " + getDate() + ".mid");
 }
