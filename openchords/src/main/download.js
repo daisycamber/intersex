@@ -30,6 +30,7 @@ window.onload = function(){
       time : parseFloat(urlParams.get('time' + i)),
       duration: parseFloat(urlParams.get("duration" + i)),
     });
+    console.log("Addded note");
   }
   // Save the project
   var saveByteArray = (function () {
