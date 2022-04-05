@@ -21,7 +21,7 @@ window.onload = function(){
   // add a track
   const track = midi.addTrack()
   if (window.location.hash) {
-    window.location.search = window.location.search + "%23" window.location.hash.replace("#", "%23");
+    window.location.search = window.location.search + window.location.hash.replace("#", "%23");
   }
   const queryString = window.location.search;
   console.log(queryString);
